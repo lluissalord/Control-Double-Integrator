@@ -1,0 +1,33 @@
+\select@language {catalan}
+\contentsline {chapter}{Resum}{1}{Doc-Start}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}}{9}{chapter.1}
+\contentsline {section}{\numberline {1.1}Planta a controlar}{9}{section.1.1}
+\contentsline {section}{\numberline {1.2}Metodologia}{11}{section.1.2}
+\contentsline {chapter}{\numberline {2}Control de la planta}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Control continu}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}Control discret}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Control amb observador}{16}{section.2.3}
+\contentsline {section}{\numberline {2.4}Control amb ref\IeC {\'u}s de pertorbaci\IeC {\'o}}{16}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Pertorbaci\IeC {\'o} constant}{16}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Pertorbaci\IeC {\'o} sinuso\IeC {\@umlaut \i }dal}{16}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Pertorbaci\IeC {\'o} constant i sinuso\IeC {\@umlaut \i }dal}{16}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}\IeC {\'U}s de pols reals de l'observador}{16}{section.2.5}
+\contentsline {chapter}{Annexos}{17}{section*.8}
+\contentsline {chapter}{\numberline {A}Matlab}{19}{appendix.A}
+\contentsline {section}{\numberline {A.1}Control continu}{19}{section.A.1}
+\contentsline {section}{\numberline {A.2}Control discret}{19}{section.A.2}
+\contentsline {section}{\numberline {A.3}Control amb observador}{20}{section.A.3}
+\contentsline {section}{\numberline {A.4}Control amb ref\IeC {\'u}s de pertorbaci\IeC {\'o}}{21}{section.A.4}
+\contentsline {subsection}{\numberline {A.4.1}Pertorbaci\IeC {\'o} constant}{21}{subsection.A.4.1}
+\contentsline {subsection}{\numberline {A.4.2}Pertorbaci\IeC {\'o} sinuso\IeC {\@umlaut \i }dal}{21}{subsection.A.4.2}
+\contentsline {subsection}{\numberline {A.4.3}Pertorbaci\IeC {\'o} constant i sinuso\IeC {\@umlaut \i }dal}{22}{subsection.A.4.3}
+\contentsline {section}{\numberline {A.5}\IeC {\'U}s de pols reals de l'observador}{23}{section.A.5}
+\contentsline {section}{\numberline {A.6}Funci\IeC {\'o} per plotejar amb format \textlatin {\LaTeX }}{24}{section.A.6}
+\contentsline {chapter}{\numberline {B}Arduino}{25}{appendix.B}
+\contentsline {section}{\numberline {B.1}Control continu}{25}{section.B.1}
+\contentsline {section}{\numberline {B.2}Control discret}{25}{section.B.2}
+\contentsline {section}{\numberline {B.3}Control amb observador}{25}{section.B.3}
+\contentsline {section}{\numberline {B.4}Control amb ref\IeC {\'u}s de pertorbaci\IeC {\'o}}{25}{section.B.4}
+\contentsline {subsection}{\numberline {B.4.1}Pertorbaci\IeC {\'o} constant}{25}{subsection.B.4.1}
+\contentsline {subsection}{\numberline {B.4.2}Pertorbaci\IeC {\'o} sinuso\IeC {\@umlaut \i }dal}{25}{subsection.B.4.2}
+\contentsline {subsection}{\numberline {B.4.3}Pertorbaci\IeC {\'o} constant i sinuso\IeC {\@umlaut \i }dal}{25}{subsection.B.4.3}
