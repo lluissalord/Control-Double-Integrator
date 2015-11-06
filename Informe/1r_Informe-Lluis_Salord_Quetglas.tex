@@ -176,6 +176,15 @@ En tenir el sistema simulat i amb un controlador adient s'ha de procedir a imple
 
 Finalment s'ha de comprovar el bon funcionament del control. Per dur a terme aquesta fase el primer és tenir alguna sortida de dades del sistema real. En aquest cas, s'utilitza el \texttt{Serial Port} de l'Arduino on a través de les funcions \texttt{Serial.print} i \texttt{Serial.println} esdevenen sortides del que es desitgi. Per l'estudi en qüestió s'envien les variables que intervenen en el sistema al \texttt{Serial Port} com són: les variables d'estat $V_1$ i $V_2$, la referència, l'acció de control $u$ i altres variables que poden ser importants segons el control que es faci. Al treure les dades pel \texttt{Serial Port}, si s'envien seguint cert patrons, poden ser llegides i plotejades \textit{online} amb el programa \texttt{KST} per exemple, o també poder ser emmagatzemades en un fitxer per després ser analitzades amb \texttt{Matlab}. Amb les dades plotejades es pot comprovar la precisió del control o comparar-les amb les dades extretes de les simulacions.
 
+\paragraph{$ $}
+
+\section{Repositori de la pràctica}\label{sec:github}
+En aquest tipus de pràctiques és molt comú l'ús de molt codi. Per tant, posar tota la informació en els Annexos pot ser molt incòmode, tant a l'hora de provar-ho, com si es vol corregir alguna errada. Per això es creu que el més convenient és posar tots els arxius de codi, incluint el \texttt{Tex} del pròpi informe, en la plataforma \texttt{GitHub}.
+
+La URL del repositori d'aquesta pràctica és:
+
+\url{https://github.com/lluissalord/Control-Double-Integrator.git}
+
 \chapter{Control de la planta}
 
 La planta d'estudi es pot arribar a controlar de diverses formes, portant totes elles a l'estabilitat. Algunes porten l'estat a la referència amb més imprecisió que d'altres, com es comprova al llarg del treball, però totes elles provoquen que la planta sigui estable, que és l'objectiu del control. En aquesta part del treball és pretén explicar com s'han duit a terme els diferents controls i les característiques de cadascun d'ells.
@@ -237,7 +246,7 @@ Un cop es té el sistema montat de tal manera que aquest pugui seguir una refer�
 
 Els pols que s'han d'imposar com s'ha dit abans han de ser uns que siguin de part real negativa o nul·la. Ara bé, en aquest sistema s'han d'escollir dos pols, per tant, aquests no poden ser de part real nul·la ja que farien el sistema inestable. Finalment, s'han escollit els pols $-5\pm20i$ que compleixen el requisit i que ha sigut proposat pel professor. 
 
-Un cop escollits els pols tan sols queda aplicar la formula d'Ackermann. Aquesta dona el valor $K$ del controlador donats els pols desitjats i les matrius $A$ i $B$ del sistema. Al cap i a la fi, dona el mateix resultat que l'assignació de pols on s'iguala el polinomi característic desitjat amb $|z \mathbf{I} - (\mathbf{A_g} - \mathbf{B_g K})|$. La formula consisteix en l'equació \eqref{eq:Acker} on $p_d(A_g)$ és el polinomi característic desitjat amb el valor de la matriu $A_g$. En el \texttt{Matlab} la funció \texttt{acker} s'encarrega de fer aquests càlculs. Si es desitja llegir el codi \texttt{Matlab} utilitzat per fer tots els càlculs es pot trobar en l'Annex \ref{ann:mat_cont}.
+Un cop escollits els pols tan sols queda aplicar la formula d'Ackermann. Aquesta dona el valor $K$ del controlador donats els pols desitjats i les matrius $A$ i $B$ del sistema. Al cap i a la fi, dona el mateix resultat que l'assignació de pols on s'iguala el polinomi característic desitjat amb $|z \mathbf{I} - (\mathbf{A_g} - \mathbf{B_g K})|$. La formula consisteix en l'equació \eqref{eq:Acker} on $p_d(A_g)$ és el polinomi característic desitjat amb el valor de la matriu $A_g$. En el \texttt{Matlab} la funció \texttt{acker} s'encarrega de fer aquests càlculs\footnote{Si es desitja llegir el codi \texttt{Matlab} utilitzat per fer tots els càlculs es pot trobar en el \texttt{GitHub} que es dona en la secció \ref{sec:github}}.
 
 \begin{equation}\label{eq:Acker}
 K=(0\quad0\quad0\quad\dots\quad1)(\mathbf{A_g}\quad \mathbf{A_g B_g}\quad \mathbf{A_g^2 B_g}\quad \dots\quad \mathbf{A_g^{n-1} B_g})^{-1} p_d(A_g)

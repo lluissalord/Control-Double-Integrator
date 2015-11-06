@@ -1,3 +1,4 @@
+%Control amb observador
 %parametres model
 A= [0 -23.8095;0 0];
 B= [0;-23.8095];

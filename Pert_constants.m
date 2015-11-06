@@ -1,4 +1,4 @@
-%Control amb refus de perturbacions (Cas perturbacions constants)
+%Refus de perturbacions (Constants)
 %parametres model
 A= [0 -23.8095;0 0];
 B= [0;-23.8095];
