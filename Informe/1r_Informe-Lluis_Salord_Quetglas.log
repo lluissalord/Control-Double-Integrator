@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.25)  6 NOV 2015 18:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.25)  11 NOV 2015 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -491,6 +491,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip46
 )
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count113
@@ -538,22 +556,22 @@ Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 (./1r_Informe-Lluis_Salord_Quetglas.aux)
 \openout1 = `1r_Informe-Lluis_Salord_Quetglas.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Info: Redefining \l on input line 57.
-LaTeX Info: Redefining \L on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Info: Redefining \l on input line 59.
+LaTeX Info: Redefining \L on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -568,28 +586,13 @@ LaTeX Info: Redefining \L on input line 57.
 \MPnumerator=\count125
 \makeMPintoPDFobject=\count126
 \everyMPtoPDFconversion=\toks24
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 57.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package hyperref Info: Link coloring OFF on input line 59.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -597,9 +600,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 57.
-LaTeX Info: Redefining \pageref on input line 57.
-LaTeX Info: Redefining \nameref on input line 57.
+LaTeX Info: Redefining \ref on input line 59.
+LaTeX Info: Redefining \pageref on input line 59.
+LaTeX Info: Redefining \nameref on input line 59.
 
 (./1r_Informe-Lluis_Salord_Quetglas.out)
 (./1r_Informe-Lluis_Salord_Quetglas.out)
@@ -649,36 +652,38 @@ LaTeX Info: Redefining \nameref on input line 57.
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.71 \end{abstract}
-                    [1] <Imatges/etseib.png, id=151, 65.043pt x 85.0377pt>
-File: Imatges/etseib.png Graphic file (type png)
-
-<use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 73.
-(pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.73 \tableofcontents
-                      [2
-
- <./Imatges/etseib.png>]
-(./1r_Informe-Lluis_Salord_Quetglas.toc
-File: Imatges/etseib.png Graphic file (type png)
- <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 29.
-(pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [3])
-\tf@toc=\write4
-\openout4 = `1r_Informe-Lluis_Salord_Quetglas.toc'.
-
+l.73 \end{abstract}
+                    [1] <Imatges/etseib.png, id=83, 65.043pt x 85.0377pt>
 File: Imatges/etseib.png Graphic file (type png)
 
 <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 75.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [4] (./1r_Informe-Lluis_Salord_Quetglas.lof
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.75 \tableofcontents
+                      [2
+
+ <./Imatges/etseib.png>]
+(./1r_Informe-Lluis_Salord_Quetglas.toc)
+\tf@toc=\write4
+\openout4 = `1r_Informe-Lluis_Salord_Quetglas.toc'.
+
+File: Imatges/etseib.png Graphic file (type png)
+ <use Imatges/etseib.png>
+Package pdftex.def Info: Imatges/etseib.png used on input line 77.
+(pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
+ [3]
+File: Imatges/etseib.png Graphic file (type png)
+
+<use Imatges/etseib.png>
+Package pdftex.def Info: Imatges/etseib.png used on input line 77.
+(pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
+ [4
+
+] (./1r_Informe-Lluis_Salord_Quetglas.lof
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -693,14 +698,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 File: Imatges/etseib.png Graphic file (type png)
 
 <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 77.
+Package pdftex.def Info: Imatges/etseib.png used on input line 79.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [5
-
-]
+ [5]
 File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 77.
+Package pdftex.def Info: Imatges/etseib.png used on input line 79.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [6
 
@@ -711,224 +714,229 @@ Package pdftex.def Info: Imatges/etseib.png used on input line 77.
 
 File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 79.
+Package pdftex.def Info: Imatges/etseib.png used on input line 81.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [7]
 File: Imatges/etseib.png Graphic file (type png)
 
 <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 79.
+Package pdftex.def Info: Imatges/etseib.png used on input line 81.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [8
 
 ]
 Cap\'{\i }tol 1.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 85.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 87.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<Imatges/circuit_scheme.png, id=232, 725.71124pt x 248.42813pt>
+<Imatges/circuit_scheme.png, id=153, 725.71124pt x 248.42813pt>
 File: Imatges/circuit_scheme.png Graphic file (type png)
 
 <use Imatges/circuit_scheme.png>
-Package pdftex.def Info: Imatges/circuit_scheme.png used on input line 97.
+Package pdftex.def Info: Imatges/circuit_scheme.png used on input line 99.
 (pdftex.def)             Requested size: 364.19667pt x 124.67622pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: Imatges/etseib.png Graphic file (type png)
-<use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 117.
+ <use Imatges/etseib.png>
+Package pdftex.def Info: Imatges/etseib.png used on input line 119.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [9]
 File: Imatges/etseib.png Graphic file (type png)
- <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 168.
+
+<use Imatges/etseib.png>
+Package pdftex.def Info: Imatges/etseib.png used on input line 170.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [10 <./Imatges/circuit_scheme.png (PNG copy)>]
 File: Imatges/etseib.png Graphic file (type png)
- <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 186.
+
+<use Imatges/etseib.png>
+Package pdftex.def Info: Imatges/etseib.png used on input line 188.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [11]
 File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 188.
+Package pdftex.def Info: Imatges/etseib.png used on input line 192.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
-
-[12]
+ [12]
 Cap\'{\i }tol 2.
-<Imatges/cont_sim_scheme.pdf, id=273, 666.44987pt x 250.41554pt>
+<Imatges/cont_sim_scheme.pdf, id=195, 666.44987pt x 250.41554pt>
 File: Imatges/cont_sim_scheme.pdf Graphic file (type pdf)
 
 <use Imatges/cont_sim_scheme.pdf>
-Package pdftex.def Info: Imatges/cont_sim_scheme.pdf used on input line 198.
+Package pdftex.def Info: Imatges/cont_sim_scheme.pdf used on input line 202.
 (pdftex.def)             Requested size: 364.19667pt x 136.84631pt.
 File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 203.
+Package pdftex.def Info: Imatges/etseib.png used on input line 207.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [13
 
  <./Imatges/cont_sim_scheme.pdf>]
 Package epstopdf Info: Source file: <Imatges/cont_sim.eps>
-(epstopdf)                    date: 2015-10-23 20:42:10
-(epstopdf)                    size: 185337 bytes
+(epstopdf)                    date: 2015-11-09 20:02:57
+(epstopdf)                    size: 185740 bytes
 (epstopdf)             Output file: <Imatges/cont_sim-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-11-02 16:16:23
-(epstopdf)                    size: 10365 bytes
+(epstopdf)                    date: 2015-11-09 20:29:21
+(epstopdf)                    size: 10602 bytes
 (epstopdf)             Command: <repstopdf --outfile=Imatges/cont_sim-eps-conve
 rted-to.pdf Imatges/cont_sim.eps>
-(epstopdf)             \includegraphics on input line 259.
+(epstopdf)             \includegraphics on input line 264.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/cont_sim-eps-converted-to.pdf, id=293, 979.66pt x 518.93875pt>
+<Imatges/cont_sim-eps-converted-to.pdf, id=215, 979.66pt x 518.93875pt>
 File: Imatges/cont_sim-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/cont_sim-eps-converted-to.pdf>
 Package pdftex.def Info: Imatges/cont_sim-eps-converted-to.pdf used on input li
-ne 259.
+ne 264.
 (pdftex.def)             Requested size: 364.19667pt x 192.91493pt.
 File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 261.
+Package pdftex.def Info: Imatges/etseib.png used on input line 269.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [14]
 File: Imatges/etseib.png Graphic file (type png)
 
 <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 279.
+Package pdftex.def Info: Imatges/etseib.png used on input line 287.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [15 <./Imatges/cont_sim-eps-converted-to.pdf>]
-File: Imatges/etseib.png Graphic file (type png)
+<Imatges/dis_sim_scheme.pdf, id=255, 707.5233pt x 164.2938pt>
+File: Imatges/dis_sim_scheme.pdf Graphic file (type pdf)
 
-<use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 300.
-(pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [16] [17
+<use Imatges/dis_sim_scheme.pdf>
+Package pdftex.def Info: Imatges/dis_sim_scheme.pdf used on input line 302.
+(pdftex.def)             Requested size: 364.19667pt x 84.57088pt.
+Package epstopdf Info: Source file: <Imatges/dis_sim.eps>
+(epstopdf)                    date: 2015-11-11 12:20:41
+(epstopdf)                    size: 581989 bytes
+(epstopdf)             Output file: <Imatges/dis_sim-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-11 12:54:41
+(epstopdf)                    size: 35728 bytes
+(epstopdf)             Command: <repstopdf --outfile=Imatges/dis_sim-eps-conver
+ted-to.pdf Imatges/dis_sim.eps>
+(epstopdf)             \includegraphics on input line 308.
+Package epstopdf Info: Output file is already uptodate.
 
+<Imatges/dis_sim-eps-converted-to.pdf, id=256, 979.66pt x 518.93875pt>
+File: Imatges/dis_sim-eps-converted-to.pdf Graphic file (type pdf)
 
-] [18]
-Ap\`endix A.
-File: Imatges/etseib.png Graphic file (type png)
-<use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 349.
-(pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [19
-
-]
+<use Imatges/dis_sim-eps-converted-to.pdf>
+Package pdftex.def Info: Imatges/dis_sim-eps-converted-to.pdf used on input lin
+e 308.
+(pdftex.def)             Requested size: 364.19667pt x 192.91493pt.
 File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 380.
+Package pdftex.def Info: Imatges/etseib.png used on input line 312.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [20]
+ [16 <./Imatges/dis_sim_scheme.pdf> <./Imatges/dis_sim-eps-converted-to.pdf>]
 File: Imatges/etseib.png Graphic file (type png)
 
 <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 436.
+Package pdftex.def Info: Imatges/etseib.png used on input line 344.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [21]
-Overfull \hbox (32.46179pt too wide) in paragraph at lines 465--465
-[]\T1/cmtt/m/n/12 %Control amb refus de perturbacions (Cas perturbacions sinuso
-idals i constants)[] 
- []
+ [17]
+Package epstopdf Info: Source file: <Imatges/dis_all.eps>
+(epstopdf)                    date: 2015-11-09 20:28:58
+(epstopdf)                    size: 212691 bytes
+(epstopdf)             Output file: <Imatges/dis_all-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-09 20:29:25
+(epstopdf)                    size: 15143 bytes
+(epstopdf)             Command: <repstopdf --outfile=Imatges/dis_all-eps-conver
+ted-to.pdf Imatges/dis_all.eps>
+(epstopdf)             \includegraphics on input line 351.
+Package epstopdf Info: Output file is already uptodate.
 
-File: Imatges/etseib.png Graphic file (type png)
-<use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 465.
-(pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [22]
-Overfull \hbox (32.46179pt too wide) in paragraph at lines 493--493
-[]\T1/cmtt/m/n/12 %Control amb refus de perturbacions (Cas perturbacions sinuso
-idals i constants)[] 
- []
+<Imatges/dis_all-eps-converted-to.pdf, id=288, 979.66pt x 518.93875pt>
+File: Imatges/dis_all-eps-converted-to.pdf Graphic file (type pdf)
 
+<use Imatges/dis_all-eps-converted-to.pdf>
+Package pdftex.def Info: Imatges/dis_all-eps-converted-to.pdf used on input lin
+e 351.
+(pdftex.def)             Requested size: 364.19667pt x 192.91493pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: Imatges/etseib.png Graphic file (type png)
 
 <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 525.
+Package pdftex.def Info: Imatges/etseib.png used on input line 370.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [23]
+ [18 <./Imatges/dis_all-eps-converted-to.pdf>]
+<Imatges/obs_sim_scheme.pdf, id=312, 752.57161pt x 366.89069pt>
+File: Imatges/obs_sim_scheme.pdf Graphic file (type pdf)
+
+<use Imatges/obs_sim_scheme.pdf>
+Package pdftex.def Info: Imatges/obs_sim_scheme.pdf used on input line 389.
+(pdftex.def)             Requested size: 364.19667pt x 177.54988pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: Imatges/etseib.png Graphic file (type png)
+
+<use Imatges/etseib.png>
+Package pdftex.def Info: Imatges/etseib.png used on input line 412.
+(pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
+ [19]
 File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 527.
+Package pdftex.def Info: Imatges/etseib.png used on input line 412.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [24]
-Ap\`endix B.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 543.
+ [20 <./Imatges/obs_sim_scheme.pdf>] [21
+
+
+] [22]
+Ap\`endix A.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 418.
 File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 543.
+Package pdftex.def Info: Imatges/etseib.png used on input line 418.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [25
+ [23
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 543.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 418.
  (./1r_Informe-Lluis_Salord_Quetglas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 543.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 543.
-
-
-Package rerunfilecheck Warning: File `1r_Informe-Lluis_Salord_Quetglas.out' has
- changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `1r_Informe-Lluis_Salord_Quetglas.ou
-t':
-(rerunfilecheck)             Before: 85C29AD01C1D369BE1C908617AD755FB;2317
-(rerunfilecheck)             After:  28EA951F11C2DAEAC70A822D0699F14C;2317.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 543.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 418.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 418.
+Package rerunfilecheck Info: File `1r_Informe-Lluis_Salord_Quetglas.out' has no
+t changed.
+(rerunfilecheck)             Checksum: 0DF88200D5991EC82C30A5B736B68EE6;1116.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 418.
  ) 
 Here is how much of TeX's memory you used:
- 8760 strings out of 493304
- 127073 string characters out of 6139871
- 230527 words of memory out of 5000000
+ 8753 strings out of 493304
+ 127445 string characters out of 6139871
+ 230159 words of memory out of 5000000
  12001 multiletter control sequences out of 15000+600000
- 22492 words of font info for 58 fonts, out of 8000000 for 9000
+ 21047 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,15n,43p,1040b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.caption.6} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.8} has been referenced but does not exist,
- replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
-are/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type
-1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
-bx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/sha
-re/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1
-/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfr
-m1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti
-1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on 1r_Informe-Lluis_Salord_Quetglas.pdf (27 pages, 520347 bytes)
+ 36i,15n,43p,1040b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+frm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+ti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/sha
+re/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on 1r_Informe-Lluis_Salord_Quetglas.pdf (25 pages, 691827 bytes)
 .
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
- 402 compressed objects within 5 object streams
- 77 named destinations out of 1000 (max. 500000)
- 285 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 434 PDF objects out of 1000 (max. 8388607)
+ 356 compressed objects within 4 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 

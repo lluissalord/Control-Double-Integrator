@@ -2,7 +2,7 @@ function plot_control(X,Y,title_plot,names, x_min, x_max, y_min, y_max)
 
 set(0,'DefaultTextInterpreter', 'latex')
 
-fontsize = 12;
+fontsize = 24;
 set(0,'defaultaxesfontsize',fontsize);
 set(0,'defaulttextfontsize',fontsize);
 
@@ -14,8 +14,8 @@ plot(X,Y(:,i),'DisplayName',names(i));
 end
 
 title(title_plot);
-xlabel('Time [s]', 'Interpreter', 'latex');
-ylabel('Voltage [V]','Interpreter','latex');
+xlabel('Temps [s]', 'Interpreter', 'latex');
+ylabel('Voltatge [V]','Interpreter','latex');
 
 axis([x_min x_max y_min y_max]);
 

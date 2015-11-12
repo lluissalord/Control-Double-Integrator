@@ -32,7 +32,6 @@ pinMode(A4, INPUT);
 Serial.begin(115200);
 while(!Serial){}
 Serial.println("X1;X2;Ref;U;V1;V2");
-Serial.println("Volt [V];Volt [V];Volt [V];Volt [V];Volt [V];Volt [V];");
 }
 
 

@@ -2,7 +2,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Esquem\IeC {\`a}tic del doble integrador instal\IeC {\textperiodcentered }lat a la placa \relax }}{10}{figure.caption.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Esquematic del sistema amb control continu\relax }}{13}{figure.caption.7}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Model de simulaci\IeC {\'o} del sistema amb control continu\relax }}{13}{figure.caption.7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Dades de la simulaci\IeC {\'o} amb control continu\relax }}{15}{figure.caption.8}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Model de simulaci\IeC {\'o} del sistema amb control en discret\relax }}{16}{figure.caption.9}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Dades de la simulaci\IeC {\'o} amb control discret\relax }}{16}{figure.caption.10}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Dades de l'Arduino amb control discret\relax }}{18}{figure.caption.11}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Model de simulaci\IeC {\'o} del sistema amb control amb observador\relax }}{20}{figure.caption.12}
 \addvspace {10\p@ }

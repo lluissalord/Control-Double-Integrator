@@ -29,11 +29,17 @@ double phi[SIZE][SIZE]={
 {0,  1,         -1.190475},
 {0,  0,         1}};
 
-//L de constant
-double L[SIZE]={
+//L amb pols -10+-20i
+/*double L[SIZE]={
   1.444580171955080,
   -0.681488187207379,
-   0.050271250844659};
+   0.050271250844659};*/
+
+//L amb pols -10 i -5
+double L[SIZE]={   
+   0.714668557215962,
+  -0.121086297638106,
+   0.006141209640978};
 
 //auxiliar variable
 char i = 0;
@@ -46,7 +52,6 @@ pinMode(A4, INPUT);
 Serial.begin(115200);
 while(!Serial){}
 Serial.println("X1_ct;X2_ct;X3_ct;Ref_ct;U_ct;V1_ct;V2_ct");
-Serial.println("Volt [V];Volt [V];Volt [V];Volt [V];Volt [V];Volt [V];Volt [V];");
 }
 
 

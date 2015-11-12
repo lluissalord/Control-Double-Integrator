@@ -2,7 +2,7 @@
 %parametres model
 A= [0 -23.8095;0 0];
 B= [0;-23.8095];
-C= eye(2);
+C= [1 0];
 D=[0;0];
 
 %buscar controlador discret
@@ -55,9 +55,9 @@ n=[c2,c1,c0];
 phi_sin=c2d(A_d,[1 0]',h);
 phi_pert=[phi gam*C_d [0;0]; zeros(2,2) phi_sin [0;0]; zeros(1,4) 1];
 gam_pert=[gam; zeros(3,1)];
-C_pert=eye(5);
+C_pert=[1 0 0 0 0];
 
 P_obs=[-10,-5];
 P_obs_dis_pert=[exp(P_obs(1)*h), exp(P_obs(2)*h),0.9, 0.2, 0.2];
-K_obs_dis_pert=acker(phi_pert', [1 0 0 0 0]', P_obs_dis_pert);
-L_pert=K_obs_dis_pert'
+K_obs_dis_pert=acker(phi_pert', C_pert', P_obs_dis_pert);
+L_pert=K_obs_dis_pert';

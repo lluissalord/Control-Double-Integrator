@@ -11,6 +11,8 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 
+\usepackage{epstopdf}
+
 \usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 
 \usepackage{fancyhdr}
@@ -52,10 +54,10 @@
 
 \title{Tecnologia de Control \\ Control d'un doble integrador}
 \author{Alumne: Lluís Salord Quetglas \\ Professor: Manel Velasco}
-\date{Octubre 2015}
+\date{Novembre 2015}
 
 \begin{document}
-%PENDENT QUE FUNCIONI L'INDEX
+
 \maketitle
 \thispagestyle{empty}
 
@@ -92,13 +94,13 @@ En aquest cas la planta a controlar és un placa que conté un doble integrador.
 
  Aquesta placa té diverses connexions per tal de comunicar-se amb l'exterior i que sigui controlable de diverses formes. Aquestes són, per una banda, les entrades de 5 V i l'acció de control \textit{u}; i per altra banda, els punts $V_1$, $V_2$ i el \textit{GND} (0 V del circuit). La relació de les connexions entre el doble integrador i l'Arduino és la que es mostra en la taula \ref{tab:con_DI_Ard}. En aquestes connexions sobretot s'ha de tenir en compte que les entrades pel \textit{DI}, són sortides per l'Arduino i a l'inrevés. Per tant, \textit{D6} s'ha de configurar com a sortida, a més de tipus \textit{PWM}, i per altra banda, \textit{A5} i \textit{A6} com a entrades en l'Arduino.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.8\textwidth]{Imatges/circuit_scheme.png}
 \caption{Esquemàtic del doble integrador instal·lat a la placa \label{fig:doble_int_scheme}}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[ht]
 \begin{center}
 \begin{tabular}{l|l}
 Arduino & Doble Integrador\\
@@ -179,11 +181,13 @@ Finalment s'ha de comprovar el bon funcionament del control. Per dur a terme aqu
 \paragraph{$ $}
 
 \section{Repositori de la pràctica}\label{sec:github}
-En aquest tipus de pràctiques és molt comú l'ús de molt codi. Per tant, posar tota la informació en els Annexos pot ser molt incòmode, tant a l'hora de provar-ho, com si es vol corregir alguna errada. Per això es creu que el més convenient és posar tots els arxius de codi, incluint el \texttt{Tex} del pròpi informe, en la plataforma \texttt{GitHub}.
+En aquest tipus de pràctiques és molt comú l'ús de molt codi. Per tant, posar tota la informació en els Annexos pot ser molt incòmode, tant a l'hora de provar-ho, com si es vol corregir alguna errada. Per això es creu que el més convenient és posar tots els fitxers de codi, incluint el \texttt{Tex} del pròpi informe, en la plataforma \texttt{GitHub}.
 
 La URL del repositori d'aquesta pràctica és:
 
 \url{https://github.com/lluissalord/Control-Double-Integrator.git}
+
+En aquest repositori es troben els diferents codis Arduino, fitxers format \texttt{.m} de \texttt{Matlab}, juntament amb els models de \texttt{Simulink} i els fitxers i imatges necessaris per dur a terme l'informe.
 
 \chapter{Control de la planta}
 
@@ -196,7 +200,7 @@ El control més senzill que es pot arribar a fer és considerar que el conjunt d
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{Imatges/cont_sim_scheme.pdf}
-\caption{Esquematic del sistema amb control continu\label{fig:cont_scheme}}
+\caption{Model de simulació del sistema amb control continu\label{fig:cont_scheme}}
 \end{figure}
 
 A banda del que s'acaba d'explicar, en la figura \ref{fig:cont_scheme} també apareixen una referència que es pretén seguir i el bloc $N_x$. Aquest permet que el sistema segueixi la referència donada. Per altra banda, també s'hi hauria d'incloure un bloc $N_u$ que multiplicaria la referència i es sumaria a l'acció de control $u$ a l'entrada de la planta, però com es veu en els càlculs de les equacions \eqref{eq:Nx_Nu}, $N_u$ és igual a zero. El sistema \eqref{eq:Nx_Nu} surt de desenvolupar els requisits \eqref{eq:req_N} per tal que es segueixi la referència. 
@@ -248,6 +252,7 @@ Els pols que s'han d'imposar com s'ha dit abans han de ser uns que siguin de par
 
 Un cop escollits els pols tan sols queda aplicar la formula d'Ackermann. Aquesta dona el valor $K$ del controlador donats els pols desitjats i les matrius $A$ i $B$ del sistema. Al cap i a la fi, dona el mateix resultat que l'assignació de pols on s'iguala el polinomi característic desitjat amb $|z \mathbf{I} - (\mathbf{A_g} - \mathbf{B_g K})|$. La formula consisteix en l'equació \eqref{eq:Acker} on $p_d(A_g)$ és el polinomi característic desitjat amb el valor de la matriu $A_g$. En el \texttt{Matlab} la funció \texttt{acker} s'encarrega de fer aquests càlculs\footnote{Si es desitja llegir el codi \texttt{Matlab} utilitzat per fer tots els càlculs es pot trobar en el \texttt{GitHub} que es dona en la secció \ref{sec:github}}.
 
+\vspace{-10pt}
 \begin{equation}\label{eq:Acker}
 K=(0\quad0\quad0\quad\dots\quad1)(\mathbf{A_g}\quad \mathbf{A_g B_g}\quad \mathbf{A_g^2 B_g}\quad \dots\quad \mathbf{A_g^{n-1} B_g})^{-1} p_d(A_g)
 \end{equation}
@@ -273,11 +278,118 @@ El primer que s'ha de fer és saber a quina freqüència treballa el controlador
 \begin{equation}\label{eq:pol_dis}
 P_{dis} = e^{T_s P_{cont}}
 \end{equation}
+\vspace{10pt}
 
 
-Per últim càlcul queda la $K$ del controlador, que es designa al llarg de treball com $K_{dis}$. Per tal d'aconseguir-ho també es pretén utilitzar la formula d'Ackermann \eqref{eq:Acker}, però no s'utilitzen les matrius $A_g$ i $B_g$, sinó les seves transformacions al sistema discret amb el període de mostreig $T_s$. Això es pot fer a través de la funció \texttt{c2d} del \texttt{Matlab}, on donades les matrius del sistema continu i el període de mostreig $T_s$ dona les matrius $\Phi$ i $\Gamma$ del sistema discret. Finalment, s'introdueixen les matrius $\Phi$ i $\Gamma$ i el període de mostreig a la funció \texttt{acker} i es té com a resultat el controlador $K_{dis}$.
+Per últim càlcul queda la $K$ del controlador, que es designa al llarg de treball com $K_{dis}$. Per tal d'aconseguir-ho també es pretén utilitzar la formula d'Ackermann \eqref{eq:Acker}, però no s'utilitzen les matrius $A_g$ i $B_g$, sinó les seves transformacions al sistema discret amb el període de mostreig $T_s$. Aquesta transformació es pot fer a través de la funció \texttt{c2d} del \texttt{Matlab}, on donades les matrius del sistema continu i el període de mostreig $T_s$ dona les matrius $\Phi$ i $\Gamma$ del sistema discret amb valors \eqref{eq:phi_gam}. Finalment, s'introdueixen les matrius $\Phi$ i $\Gamma$ i el període de mostreig a la funció \texttt{acker} i es té com a resultat el controlador $K_{dis} = \begin{bmatrix}
+0.5398 & -0.6518
+\end{bmatrix}$.\label{pag:trans_phi_gam}
+
+\begin{equation}\label{eq:phi_gam}
+\Phi=\begin{bmatrix}
+1 &	-1,1905\\
+0 & 1
+\end{bmatrix} \;\;\;\;\;\;\; \Gamma=\begin{bmatrix}
+0,7086\\
+-1,1905
+\end{bmatrix}
+\end{equation}
+
+Un cop és tenen tots els càlculs fets s'ha de procedir a dur a terme la simulació amb \texttt{Simulink}. El model de simulació és l'exposat en la figura \ref{fig:dis_sim_scheme}. A partir d'aquest, en surt el gràfic de la figura \ref{fig:dis_sim} que descriu la dinàmica del sistema amb el mateix tipus de referència que després s'utilitza en l'Arduino. Com es pot comprovar tendeix al valor de la referència en l'estacionari.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/dis_sim_scheme.pdf}
+\caption{Model de simulació del sistema amb control en discret\label{fig:dis_sim_scheme}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/dis_sim.eps}
+\caption{Dades de la simulació amb control discret\label{fig:dis_sim}}
+\end{figure}
+
+\newpage
+Aquest al ser un cas més realista si que s'ha portat a fer les proves amb l'Arduino, per tal de veure si el comportament simulat i el real equivalen. A l'hora d'implementar el sistema en l'Arduino es pren la plantilla base de l'enunciat de la pràctica on tan sols falta l'algorisme de control y els valors de les constants. L'algorisme es basa en l'equació \eqref{eq:dis_u} on $V = \begin{bmatrix}
+V_1\\
+V_2
+\end{bmatrix}$ i $r$ la referència que es pretén seguir.
+
+\begin{equation}\label{eq:dis_u}
+u=K_{dis} (N_x \cdot r - V) + N_u \cdot r
+\end{equation}
+
+Ara bé, s'han de tenir una sèrie de detalls en compte a l'hora d'implementar a l'Arduino:
+
+\begin{itemize}
+\item Al llegir les variables de l'exterior ($V_1$ i $V_2$) amb \texttt{analogRead} aquesta esta escalada entre 0 i 1023.
+\item Al escriure pel \texttt{PWM} s'ha d'escalar entre 0 i 256.
+\item Els voltatges estan \textit{offsejats} $2.5$ V a l'alça. Per tant, després de llegir i transformar a volts s'ha de restar $2.5$, per $V_1$ i $V_2$, i per $u$ abans d'enviar s'ha sumar $2.5$ per estar en referència absoluta.
+\item S'ha de treballar amb variables tipus \texttt{float} o \texttt{double} per tal de fer els càlculs correctament.
+\item La referència oscil·la entre $0.5$ i $1.5$ volts en lloc d'entre $1$ i $-1$ volts ja que sinó en algun moment s'arribava a la saturació i el funcionament no era del tot exacte.
+\end{itemize}
+
+Un cop passat a codi les equacions tenint en compte els punt anterior només s'ha d'afegir la part de codi que permet la lectura de les variables des de l'exterior. Això es du a terme a traves del \texttt{Serial Port} on amb la comanda \texttt{Serial.print} i \texttt{Serial.println} permet transmetre el que es desitgi. En aquest cas, s'envien les variables $V_1$, $V_2$, $U$ i la referència, totes aquestes en referència absoluta. Finalment, tan sols queda compilar i transferir el codi a l'Arduino.
+
+A l'hora de comprovar que està passant a l'Arduino s'han arribat a utilitzar tres mètodes diferents segons el que es desitgi fer:
+
+\begin{itemize}
+\item Finestra del \texttt{Serial Port}, que es troba en la mateixa \texttt{IDE} de l'Arduino. Aquí es veu directament el que s'envia.
+\item Programa \texttt{KST}, el qual si les variables s'envien amb un cert format es poden \textit{plotejar} en temps real.
+\item A través de \texttt{Matlab}, un cop finalitzada l'escriptura de l'enviament de dades en un fitxer, importar les dades d'aquest.
+\end{itemize}
+
+D'aquests casos, tant el \texttt{KST} com el \texttt{Matlab}, requereixen de l'escriptura del que transmet el \texttt{Serial Port} en un arxiu de text. Això es pot fer utilitzant la comanda següent:
+
+\texttt{cu -l /dev/ttyACM0 -s 115200 > nom\_arxiu.txt}
+
+\vspace{10pt}
+En cas del control discret les dades que s'han pogut extreure de l'Arduino són les que s'exposen en la figura \ref{fig:dis_all}. Com es pot observar, en aquest cas segueix molt bé la senyal, amb un petit soroll probablement degut al sensor a l'hora de llegir la senyal. Per tant, dur a terme una realimentació d'estat és un sistema de control que dona un bon resultat.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/dis_all.eps}
+\caption{Dades de l'Arduino amb control discret\label{fig:dis_all}}
+\end{figure}
 
 \section{Control amb observador}
+
+Dur a terme una realimentació d'estat obliga a tenir un sensor per cadascun dels estats que es controlen. Aquest fet comporta un cost enorme en sensors. Per això, en molts cops es tendeix a fer el control de tot un sistema tan sols utilitzant un o uns pocs estats i per tant amb menys sensors. Per fer-ho s'utilitza un observador, que equivaldria a una simulació de la planta, però amb l'ús d'un o més dels estats reals per tal de portar sempre aquest observador al valor real.
+
+Ara bé, no es pot implementar un control amb observador a qualsevol planta, aquestes han de complir que siguin observables, per tant que a partir de l'estat observat i l'acció de control es poden deduir tots els estats en un nombre finit de períodes $n$. Això es compleix si la matriu $W_o$ de l'equació \eqref{eq:observabilitat} és de rang $n$. En el cas d'estudi, el sistema es observable, i per tant, es pot dur a terme el control amb observador.
+\vspace{-10pt}
+
+\begin{equation}\label{eq:observabilitat}
+W_o = \begin{bmatrix}
+C\\
+C A\\
+C A^2\\
+\vdots\\
+C A^{n-1}
+\end{bmatrix}
+\end{equation}
+
+La idea de l'observador és a partir del model de la planta, la sortida $y$ de la planta y l'acció de control $u$, estimar els estats de la planta i utilitzar aquesta estimació per realimentar el sistema, $u_k = -K_{dis}\cdot\bar{x}_k$. En aquest cas, s'ha considerat la matriu $C_g=[1 ~ 0]$, per tant, la sortida $y$ és $V_1$. Tenir en compte que l'observador, en la realitat, es troba en l'Arduino, per tant, és un sistema discret. Per això el model de la planta que s'utilitza en l'observador és el de la planta original passat a discret\footnote{El procés està explicat en la secció anterior a la pàgina \pageref{pag:trans_phi_gam}}, per tant, utilitza $\Phi$ i $\Gamma$.
+
+Per altra banda, a l'hora d'escollir els pols, s'ha basat en utilitzar uns pols un poc més ràpids que els de la planta per a poder arribar al seu valor real, però no molt més per no amplificar el soroll que hi pugui haver. Per això, s'ha prés la part real dels pols de la planat i s'ha multiplicat per dos, sent així els pols de l'observador: $-10\pm20i$ en el pla S. 
+
+Un cop escollits els pols, s'ha de procedir al càlcul de la $L$ de l'observador. Si es fes per assignació de pols, s'haurien d'igualar els pols, al polinomi $|z\mathbf{I}-(\mathbf{\Phi} - \mathbf{L C_g})|$. Ara bé, si observem en que es basava la formula d'Ackermann \eqref{eq:Acker}, es pot observar com si ara s'utilitza $\Phi^T$ i $C_g^T$ en lloc de $A_g$ i $B_g$ aquesta formula donaria com a resultat $L^T$. En aquest cas, s'ha utilitzat la formula de Ackermann de la forma anterior i ha donat com a resultat $L=\begin{bmatrix}
+1,3446\\
+-0,5985
+\end{bmatrix}$
+
+Com en tots els casos, un cop es tenen els valors de les matrius a utilitzar i les constants dels controladors, es procedeix a fer la simulació en \texttt{Simulink}. En aquest cas, el model queda expressat com en la figura \ref{fig:obs_sim_scheme}. El model de l'observador es basa en l'equació \eqref{eq:obs_model}. S'ha de tenir en compte el fet que la sortida de la planta a controlar és continua, per tant a l'hora d'utilitzar $y_k$, aquesta s'ha de discretitzar a la mateixa freqüència de treball del controlador per ser realista. A més, al voler tenir la informació de tots els estats, tot i ser $C_g=$[1 0], en la el bloc d'Espai d'Estats s'ha donat una $C$ igual a la identitat i així poder llegir els estats, sent posteriorment multiplicat per  $C_g$ per donar la sortida.
+
+\begin{equation}\label{eq:obs_model}
+\bar{x}_{k+1} = \Phi \bar{x}_k + \Gamma u_k + L (y_k - C_g \bar{x}_k)
+\end{equation}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/obs_sim_scheme.pdf}
+\caption{Model de simulació del sistema amb control amb observador\label{fig:obs_sim_scheme}}
+\end{figure}
+
 
 \section{Control amb refús de pertorbació}
 
@@ -301,243 +413,6 @@ Per últim càlcul queda la $K$ del controlador, que es designa al llarg de treb
 \addappheadtotoc
 \appendixpage
 
-\chapter{Matlab}
-
-\section{Control continu}\label{ann:mat_cont}
-\begin{verbatim}
-%parametres model
-A= [0 -23.8095;0 0];
-B= [0;-23.8095];
-C= [1 0];
-D=[0;0];
-
-%buscar controlador continu(realimentacio)
-P=[-5+20i,-5-20i];
-K=acker(A,B,P);
-
-%busco parametres Nu i Nx
-W=[A B;C 0];
-N=inv(W)*[0;0;1];
-Nx=N(1:2);
-Nu=N(3);
-\end{verbatim}
-
-\section{Control discret}\label{ann:mat_dis}
-
-\begin{verbatim}
-%parametres model
-A= [0 -23.8095;0 0];
-B= [0;-23.8095];
-C= [1 0];
-D=[0;0];
-
-
-%pols de llaç tancat en continu
-P=[-5+20i,-5-20i];
-
-%buscar controlador discret
-h=5E-2;
-[phi, gam] = c2d(A,B,h);
-P_dis=[exp(P(1)*h), exp(P(2)*h)];
-K_dis=acker(phi,gam,P_dis);
-
-%busco parametres Nu i Nx
-W=[phi-eye(2) gam;C 0];
-N=inv(W)*[0;0;1];
-Nx=N(1:2);
-Nu=N(3);
-\end{verbatim}
-
-\section{Control amb observador}\label{ann:mat_obs}
-\begin{verbatim}
-%parametres model
-A= [0 -23.8095;0 0];
-B= [0;-23.8095];
-C= [1 0];
-D=[0;0];
-
-%pols de llaç tancat en continu
-P=[-5+20i,-5-20i];
-
-%buscar controlador discret
-h=5E-2;
-[phi, gam] = c2d(A,B,h);
-P_dis=[exp(P(1)*h), exp(P(2)*h)];
-K_dis=acker(phi,gam,P_dis);
-
-%busco parametres Nu i Nx
-W=[phi-eye(2) gam;C 0];
-N=inv(W)*[0;0;1];
-Nx=N(1:2);
-Nu=N(3);
-
-%buscar controlador de l'observador amb pols més ràpids que la planta
-P_obs=[-10+20i,-10-20i];
-P_obs_dis=exp(P_obs.*h);
-K_obs_dis=acker(phi', C', P_obs_dis);
-L=K_obs_dis';
-C_obs=eye(2);
-\end{verbatim}
-
-\section{Control amb refús de pertorbació}\label{ann:mat_pert}
-
-\subsection{Pertorbació constant}\label{ann:mat_pert_ct}
-\begin{verbatim}
-%Control amb refus de perturbacions (Cas perturbacions constants)
-%parametres model
-A= [0 -23.8095;0 0];
-B= [0;-23.8095];
-C= eye(2);
-D=[0;0];
-
-%buscar controlador continu(realimentacio)
-P=[-5+20i,-5-20i];
-h=5E-2;
-[phi, gam] = c2d(A,B,h);
-P_dis=[exp(P(1)*h), exp(P(2)*h)];
-K_dis=acker(phi,gam,P_dis);
-
-
-phi_pert=[phi gam; 0 0 1];
-gam_pert=[gam; 0];
-C_pert=eye(3);
-
-P_obs=[-10+20i,-10-20i];
-P_obs_dis_pert=[exp(P_obs.*h), 0.9];
-K_obs_dis_pert=acker(phi_pert', [1 0 0]', P_obs_dis_pert);
-L_pert=K_obs_dis_pert';
-\end{verbatim}
-
-\subsection{Pertorbació sinusoïdal}\label{ann:mat_pert_sin}
-\begin{verbatim}
-%Control amb refus de perturbacions (Cas perturbacions sinusoidals)
-%parametres model
-A= [0 -23.8095;0 0];
-B= [0;-23.8095];
-C= eye(2);
-D=[0;0];
-%buscar controlador discret
-P=[-5+20i,-5-20i];
-h=5E-2;
-[phi, gam] = c2d(A,B,h);
-P_dis=[exp(P(1)*h), exp(P(2)*h)];
-K_dis=acker(phi,gam,P_dis);
-
-w=2.4*2*pi();
-phi_sin=c2d([0 1;-w*w 0],[1 0]',h);
-phi_pert=[phi gam [0;0]; zeros(2) phi_sin];
-gam_pert=[gam; 0; 0];
-C_pert=eye(4);
-
-P_obs=[-10+20i,-10-20i];
-P_obs_dis_pert=[exp(P_obs.*h), 0.3, 0.3];
-K_obs_dis_pert=acker(phi_pert', [1 0 0 0]', P_obs_dis_pert);
-L_pert=K_obs_dis_pert';
-\end{verbatim}
-
-
-\subsection{Pertorbació constant i sinusoïdal}\label{ann:mat_pert_ct_sin}
-\begin{verbatim}
-%Control amb refus de perturbacions (Cas perturbacions sinusoidals i constants)
-%parametres model
-A= [0 -23.8095;0 0];
-B= [0;-23.8095];
-C= eye(2);
-D=[0;0];
-
-%buscar controlador discret
-P=[-5+20i,-5-20i];
-h=5E-2;
-[phi, gam] = c2d(A,B,h);
-P_dis=[exp(P(1)*h), exp(P(2)*h)];
-K_dis=acker(phi,gam,P_dis);
-
-w=2.4*2*pi();
-phi_sin=c2d([0 1;-w*w 0],[1 0]',h);
-phi_pert=[phi gam gam [0;0]; zeros(3,2) [1;0;0] [[0 0]; phi_sin]];
-gam_pert=[gam; 0; 0; 0];
-C_pert=eye(5);
-
-P_obs=[-10+20i,-10-20i];
-P_obs_dis_pert=[exp(P_obs.*h), 0.4, 0.4, 0.9];
-K_obs_dis_pert=acker(phi_pert', [1 0 0 0 0]', P_obs_dis_pert);
-L_pert=K_obs_dis_pert';
-\end{verbatim}
-
-\section{Ús de pols reals de l'observador}
-\begin{verbatim}
-%Control amb refus de perturbacions (Cas perturbacions sinusoidals i constants)
-%parametres model
-A= [0 -23.8095;0 0];
-B= [0;-23.8095];
-C= eye(2);
-D=[0;0];
-
-%buscar controlador discret
-P=[-5+20i,-5-20i];
-h=5E-2;
-[phi, gam] = c2d(A,B,h);
-P_dis=[exp(P(1)*h), exp(P(2)*h)];
-K_dis=acker(phi,gam,P_dis);
-
-w=0.5371*2*pi();
-phi_sin=c2d([0 1;-w*w 0],[1 0]',h);
-phi_pert=[phi gam gam [0;0]; zeros(3,2) [1;0;0] [[0 0]; phi_sin]];
-gam_pert=[gam; 0; 0; 0];
-C_pert=eye(5);
-
-P_obs=[-10,-5];
-P_obs_dis_pert=[exp(P_obs.*h), 0.9, 0.9, 0.9];
-K_obs_dis_pert=acker(phi_pert', [1 0 0 0 0]', P_obs_dis_pert);
-L_pert=K_obs_dis_pert';
-\end{verbatim}
-
-\section{Funció per plotejar amb format \LaTeX}\label{ann:mat_plot}
-\begin{verbatim}
-function plot_control(X,Y,title_plot,names, x_min, x_max, y_min, y_max)
-
-set(0,'DefaultTextInterpreter', 'latex')
-
-fontsize = 12;
-set(0,'defaultaxesfontsize',fontsize);
-set(0,'defaulttextfontsize',fontsize);
-
-figure
-hold on;
-
-for i=1:length(Y(1,:))
-plot(X,Y(:,i),'DisplayName',names(i));
-end
-
-title(title_plot);
-xlabel('Time [s]', 'Interpreter', 'latex');
-ylabel('Voltage [V]','Interpreter','latex');
-
-axis([x_min x_max y_min y_max]);
-
-h=legend(names);
-set(h,'Interpreter', 'latex');
-
-grid on;
-
-end
-
-\end{verbatim}
-
-\chapter{Arduino}
-
-\section{Control continu}
-
-\section{Control discret}
-
-\section{Control amb observador}
-
-\section{Control amb refús de pertorbació}
-
-\subsection{Pertorbació constant}
-
-\subsection{Pertorbació sinusoïdal}
-
-\subsection{Pertorbació constant i sinusoïdal}
+\chapter{Càlculs per refús de pertorbacions d'un rang de freqüències sinusoïdals}
 
 \end{document}

@@ -22,7 +22,7 @@ pinMode(A5, INPUT);
 pinMode(A4, INPUT);
 Serial.begin(115200);
 while(!Serial){}
-Serial.print("Ref;U;V1;V2");
+Serial.println("Ref;U;V1;V2");
 }
 
 
@@ -53,13 +53,13 @@ u=u*255/5;
 analogWrite(PWMport,u);
 
 
-Serial.print(ref+2.5);
+Serial.print(ref);
 Serial.print(";");
-Serial.print(u*5/255);
+Serial.print(u*5/255-2.5);
 Serial.print(";");
-Serial.print(v1value*5./1023);
+Serial.print(v1value*5./1023-2.5);
 Serial.print(";");
-Serial.print(v2value*5./1023);
+Serial.print(v2value*5./1023-2.5);
 Serial.println(";");
 
 delay(h);

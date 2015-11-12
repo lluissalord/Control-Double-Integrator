@@ -21,6 +21,8 @@ double estat[SIZE]={0, 0, 0, 0, 0};
 //Per guardar la variable en aquest mateix instant, sino es modifica i no calcula be x2
 double estat_bef[SIZE]={0, 0, 0, 0, 0};
 double gam[SIZE]={0.708615362812500, -1.190475, 0, 0, 0};
+
+//Pols en S -10, -5 i pols en Z 0.9, 0.9, 0.9
 double phi[SIZE][SIZE]={
 {1,  -1.190475, 0.708615362812500, 0.708615362812500,   0},
 {0,  1,       -1.190475,         -1.190475,           0},
@@ -28,13 +30,13 @@ double phi[SIZE][SIZE]={
 {0,  0,       0,                 0.985798003782398,   0.049763075194479},
 {0,  0,       0,                 -0.566731369161185, 0.985798003782398}};
 
-//L de const i sinus (pols en S -10, -5 i pols en Z 0.4, 0.4, 0.9)
 double L[SIZE] = {
   0.886264564780693,
   -0.201743561486637,
    0.002162093816566,
    0.008686621488739,
   -0.055319881225164};
+
 //auxiliar variable
 char i = 0;
 

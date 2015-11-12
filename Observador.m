@@ -24,4 +24,4 @@ P_obs=[-10+20i,-10-20i];
 P_obs_dis=exp(P_obs.*h);
 K_obs_dis=acker(phi', C', P_obs_dis);
 L=K_obs_dis';
-C_obs=eye(2);
+C_obs=[1 0];

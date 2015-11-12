@@ -12,22 +12,5 @@
 \BOOKMARK [2][-]{subsection.2.4.2}{Pertorbaci\363 sinuso\357dal}{section.2.4}% 12
 \BOOKMARK [2][-]{subsection.2.4.3}{Pertorbaci\363 constant i sinuso\357dal}{section.2.4}% 13
 \BOOKMARK [1][-]{section.2.5}{\332s de pols reals de l'observador}{chapter.2}% 14
-\BOOKMARK [0][-]{section*.9}{Annexos}{}% 15
-\BOOKMARK [0][-]{appendix.A}{Matlab}{}% 16
-\BOOKMARK [1][-]{section.A.1}{Control continu}{appendix.A}% 17
-\BOOKMARK [1][-]{section.A.2}{Control discret}{appendix.A}% 18
-\BOOKMARK [1][-]{section.A.3}{Control amb observador}{appendix.A}% 19
-\BOOKMARK [1][-]{section.A.4}{Control amb ref\372s de pertorbaci\363}{appendix.A}% 20
-\BOOKMARK [2][-]{subsection.A.4.1}{Pertorbaci\363 constant}{section.A.4}% 21
-\BOOKMARK [2][-]{subsection.A.4.2}{Pertorbaci\363 sinuso\357dal}{section.A.4}% 22
-\BOOKMARK [2][-]{subsection.A.4.3}{Pertorbaci\363 constant i sinuso\357dal}{section.A.4}% 23
-\BOOKMARK [1][-]{section.A.5}{\332s de pols reals de l'observador}{appendix.A}% 24
-\BOOKMARK [1][-]{section.A.6}{Funci\363 per plotejar amb format LaTeX}{appendix.A}% 25
-\BOOKMARK [0][-]{appendix.B}{Arduino}{}% 26
-\BOOKMARK [1][-]{section.B.1}{Control continu}{appendix.B}% 27
-\BOOKMARK [1][-]{section.B.2}{Control discret}{appendix.B}% 28
-\BOOKMARK [1][-]{section.B.3}{Control amb observador}{appendix.B}% 29
-\BOOKMARK [1][-]{section.B.4}{Control amb ref\372s de pertorbaci\363}{appendix.B}% 30
-\BOOKMARK [2][-]{subsection.B.4.1}{Pertorbaci\363 constant}{section.B.4}% 31
-\BOOKMARK [2][-]{subsection.B.4.2}{Pertorbaci\363 sinuso\357dal}{section.B.4}% 32
-\BOOKMARK [2][-]{subsection.B.4.3}{Pertorbaci\363 constant i sinuso\357dal}{section.B.4}% 33
+\BOOKMARK [0][-]{section*.13}{Annexos}{}% 15
+\BOOKMARK [0][-]{appendix.A}{C\340lculs per ref\372s de pertorbacions d'un rang de freq\374\350ncies sinuso\357dals}{}% 16

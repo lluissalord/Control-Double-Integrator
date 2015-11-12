@@ -1,5 +1,5 @@
 Model {
-  Name			  "simulink_discret_p1"
+  Name			  "simulink_discret"
   Version		  8.4
   MdlSubVersion		  0
   SavedCharacterEncoding  "UTF-8"
@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.5"
+    ComputedModelVersion    "1.8"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [327.0, 181.0, 801.0, 502.0]
+      Location		      [327.0, 237.0, 801.0, 502.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lluis"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Oct 24 13:52:44 2015"
-  RTWModifiedTimeStamp	  367595558
-  ModelVersionFormat	  "1.%<AutoIncrement:5>"
+  LastModifiedDate	  "Wed Nov 11 12:18:21 2015"
+  RTWModifiedTimeStamp	  369145099
+  ModelVersionFormat	  "1.%<AutoIncrement:8>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -183,7 +183,7 @@ Model {
 	  $ObjectID		  8
 	  Version		  "1.14.3"
 	  StartTime		  "0.0"
-	  StopTime		  "10.0"
+	  StopTime		  "25"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -781,6 +781,30 @@ Model {
   }
   BlockParameterDefaults {
     Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      PulseType		      "Sample based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Period		      "2"
+      PulseWidth	      "1"
+      PhaseDelay	      "0"
+      SampleTime	      "1"
+      VectorParams1D	      on
+    }
+    Block {
       BlockType		      Gain
       Gain		      "1"
       Multiplication	      "Element-wise(K.*u)"
@@ -815,15 +839,6 @@ Model {
       Realization	      "auto"
     }
     Block {
-      BlockType		      Step
-      Time		      "1"
-      Before		      "0"
-      After		      "1"
-      SampleTime	      "-1"
-      VectorParams1D	      on
-      ZeroCross		      on
-    }
-    Block {
       BlockType		      Sum
       IconShape		      "rectangular"
       Inputs		      "++"
@@ -856,8 +871,8 @@ Model {
     }
   }
   System {
-    Name		    "simulink_discret_p1"
-    Location		    [327, 181, 1128, 683]
+    Name		    "simulink_discret"
+    Location		    [327, 237, 1128, 739]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -871,7 +886,15 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "16"
+    SIDHighWatermark	    "19"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant2"
+      SID		      "17"
+      Position		      [30, 180, 60, 210]
+      ZOrder		      82
+      Value		      "0.5"
+    }
     Block {
       BlockType		      Gain
       Name		      "K controlador"
@@ -908,6 +931,18 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
+      BlockType		      DiscretePulseGenerator
+      Name		      "Pulse\nGenerator2"
+      SID		      "18"
+      Ports		      [0, 1]
+      Position		      [10, 84, 40, 116]
+      ZOrder		      80
+      PulseType		      "Time based"
+      Amplitude		      "-2"
+      Period		      "20"
+      PulseWidth	      "50"
+    }
+    Block {
       BlockType		      StateSpace
       Name		      "State-Space"
       SID		      "1"
@@ -919,14 +954,6 @@ Model {
       C			      "[1 0;0 1]"
       D			      "[0; 0]"
       X0		      "1"
-    }
-    Block {
-      BlockType		      Step
-      Name		      "Step"
-      SID		      "2"
-      Position		      [15, 85, 45, 115]
-      ZOrder		      -22
-      SampleTime	      "0"
     }
     Block {
       BlockType		      Sum
@@ -943,6 +970,20 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
+      BlockType		      Sum
+      Name		      "Sum12"
+      SID		      "19"
+      Ports		      [2, 1]
+      Position		      [65, 90, 85, 110]
+      ZOrder		      81
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
       BlockType		      ToWorkspace
       Name		      "To Workspace"
       SID		      "16"
@@ -951,7 +992,7 @@ Model {
       ZOrder		      1
       VariableName	      "sim_dis"
       MaxDataPoints	      "inf"
-      SaveFormat	      "Structure With Time"
+      SaveFormat	      "Timeseries"
       Save2DSignal	      "3-D array (concatenate along third dimension)"
       FixptAsFi		      on
       SampleTime	      "-1"
@@ -986,13 +1027,6 @@ Model {
       SrcBlock		      "Sum"
       SrcPort		      1
       DstBlock		      "Zero-Order\nHold1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      7
-      SrcBlock		      "Step"
-      SrcPort		      1
-      DstBlock		      "Nx"
       DstPort		      1
     }
     Line {
@@ -1031,6 +1065,28 @@ Model {
       SrcBlock		      "Mux"
       SrcPort		      1
       DstBlock		      "To Workspace"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      18
+      SrcBlock		      "Pulse\nGenerator2"
+      SrcPort		      1
+      DstBlock		      "Sum12"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      19
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      Points		      [10, 0]
+      DstBlock		      "Sum12"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      20
+      SrcBlock		      "Sum12"
+      SrcPort		      1
+      DstBlock		      "Nx"
       DstPort		      1
     }
   }

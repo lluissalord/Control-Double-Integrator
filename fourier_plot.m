@@ -3,7 +3,7 @@ figure
 
 set(0,'DefaultTextInterpreter', 'latex')
 
-fontsize = 12;
+fontsize = 24;
 set(0,'defaultaxesfontsize',fontsize);
 set(0,'defaulttextfontsize',fontsize);
 
