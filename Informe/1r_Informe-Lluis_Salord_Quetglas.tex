@@ -378,7 +378,7 @@ Un cop escollits els pols, s'ha de procedir al càlcul de la $L$ de l'observador
 -0,5985
 \end{bmatrix}$
 
-Com en tots els casos, un cop es tenen els valors de les matrius a utilitzar i les constants dels controladors, es procedeix a fer la simulació en \texttt{Simulink}. En aquest cas, el model queda expressat com en la figura \ref{fig:obs_sim_scheme}. El model de l'observador es basa en l'equació \eqref{eq:obs_model}. S'ha de tenir en compte el fet que la sortida de la planta a controlar és continua, per tant a l'hora d'utilitzar $y_k$, aquesta s'ha de discretitzar a la mateixa freqüència de treball del controlador per ser realista. A més, al voler tenir la informació de tots els estats, tot i ser $C_g=$[1 0], en la el bloc d'Espai d'Estats s'ha donat una $C$ igual a la identitat i així poder llegir els estats, sent posteriorment multiplicat per  $C_g$ per donar la sortida.
+Com en tots els casos, un cop es tenen els valors de les matrius a utilitzar i les constants dels controladors, es procedeix a fer la simulació en \texttt{Simulink}. En aquest cas, el model queda expressat com en la figura \ref{fig:obs_sim_scheme}. El model de l'observador es basa en l'equació \eqref{eq:obs_model}. S'ha de tenir en compte el fet que la sortida de la planta a controlar és continua, per tant a l'hora d'utilitzar $y_k$, aquesta s'ha de discretitzar a la mateixa freqüència de treball del controlador per ser realista. A més, al voler tenir la informació de tots els estats, tot i ser $C_g=$[1 0] en la el bloc d'Espai d'Estats de la planta, s'ha donat una $C$ igual a la identitat i així poder llegir els estats, sent posteriorment multiplicat per $C_g$ per donar la sortida real.
 
 \begin{equation}\label{eq:obs_model}
 \bar{x}_{k+1} = \Phi \bar{x}_k + \Gamma u_k + L (y_k - C_g \bar{x}_k)
@@ -390,12 +390,157 @@ Com en tots els casos, un cop es tenen els valors de les matrius a utilitzar i l
 \caption{Model de simulació del sistema amb control amb observador\label{fig:obs_sim_scheme}}
 \end{figure}
 
+Amb el model donat, el valor de $L$ calculat i les matrius $\Phi$ i $\Gamma$, el resultat de la simulació és el mostrat en la figura \ref{fig:obs_all_sim}. Aquí es comprova com és possible el control de la planta tan sols coneixent la sortida $V_1$ amb precisió.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/obs_all_sim.eps}
+\caption{Dades de la simulació amb control discret\label{fig:obs_all_sim}}
+\end{figure}
+
+A l'hora d'implementar-ho en l'Arduino, el codi es basa en l'equació \eqref{eq:obs_model} i l'equació \eqref{eq:dis_u} adaptada al cas de l'ús de les variables d'observador que queda finalment com l'equació \eqref{eq:obs_u} sent $X=\begin{bmatrix}
+X_1\\
+X_2
+\end{bmatrix}$ els estats de l'observador. Un detall a tenir en compte a l'hora d'escriure el codi és el fet que es necessari tenir una variable auxiliar on es guardin els valors de l'estat anterior per tal de poder fer els càlculs de forma adequada.
+
+\vspace{-11pt}
+\begin{equation}\label{eq:obs_u}
+u=K_{dis} (N_x \cdot r - X) + N_u \cdot r
+\end{equation}
+
+Un cop s'ha implementat el codi, s'estudien les sortides per tal de veure si el control s'ha duit a terme de forma adequada. Les sortides en aquest cas són segons la figura \ref{fig:obs_all}. Es pot observar que el control és bastant acurat, tot i que amb un poc de soroll, i a més si es mira amb més detall, es pot veure com hi ha un petit \textit{offset} en tot el gràfic. Aquest fet és pot veure més en detall en la figura \ref{fig:obs_offset}. Per poder arribar a solucionar aquest problema una solució adequada és el control amb refús de pertorbacions constants.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/obs_all.eps}
+\caption{Dades de l'Arduino amb control amb observador\label{fig:obs_all}}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/obs_offset.eps}
+\caption{Detall de l'\textit{offset} del control amb observador\label{fig:obs_offset}}
+\end{figure}
 
 \section{Control amb refús de pertorbació}
 
+El control amb refús de pertorbacions d'un determinat tipus de soroll també es pot entendre com un control per seguir una referència d'aquest mateix tipus. Realment el que s'aconsegueix amb aquest tipus de control és que si l'error que s'està donant és de la forma que es pretén refusar o seguir, doncs ho aconseguirà de forma perfecta. Per això, és pretén estimar la pertorbació $w$ i aquesta compensar-la amb l'estimació $\bar{w}$ on s'intenta aconseguir $\bar{w}=w$.
+
+La base teòrica d'aquest control és estimar $w$, per fer-ho s'ha de modelar segons \eqref{eq:pert_cont} on $F^d$ i $C^d$ són les matrius que modelen la pertorbació i $x^d$ els estats. 
+
+\begin{equation}\label{eq:pert_cont}
+\left\{
+\begin{array}{lr}
+\dot{x}^d_k = \Phi^d x^d_k\\
+w_k=C^d x^d_k
+\end{array}
+\right.
+\end{equation}
+
+Això seria pel cas continu, ara bé, en aquest cas, l'observador ha d'estar en discret, per tant, s'ha d'utilitzar $\Phi^d=e^{F^d T_s}$ sent el model \eqref{eq:pert_dis}.
+
+\begin{equation}\label{eq:pert_dis}
+\left\{
+\begin{array}{lr}
+\dot{x}^d_k = \Phi^d x^d_k\\
+w_k=C^d x^d_k
+\end{array}
+\right.
+\end{equation}
+
+Un cop modelada la pertorbació $w_k$, aquesta s'ha d'incorporar al model general de tal manera que queda de la forma \eqref{eq:pert_model} que es pot reescriure amb forma matricial com \eqref{eq:pert_model_mat}
+
+\begin{equation}\label{eq:pert_model}
+\left\{
+\begin{array}{lr}
+x_{k+1} = \Phi x_k + \Gamma u_k + \Gamma_1 w_k\\
+y_k=C x_k
+\end{array}
+\right.
+\end{equation}
+
+\begin{equation}\label{eq:pert_model_mat}
+\left\{
+\begin{array}{lr}
+\begin{bmatrix}
+x_{k+1}\\
+x^d_{k+1}
+\end{bmatrix} = 
+\begin{bmatrix}
+\Phi & \Gamma_1 C^d\\
+0 & \Phi^d
+\end{bmatrix} \begin{bmatrix}
+x_{k}\\
+x^d_{k}
+\end{bmatrix} + 
+\begin{bmatrix}
+\Gamma\\
+0
+\end{bmatrix} u_k = \Phi_w \begin{bmatrix}
+x_{k}\\
+x^d_{k}
+\end{bmatrix} + \Gamma_w u_k\\
+y_k=\begin{bmatrix}
+C & 0
+\end{bmatrix} \begin{bmatrix}
+x_{k}\\
+x^d_{k}
+\end{bmatrix} = C_w \begin{bmatrix}
+x_{k}\\
+x^d_{k}
+\end{bmatrix}
+\end{array}
+\right.
+\end{equation}
+
+Al tenir l'observador amb l'estimació de la pertorbació, tan sols cal trobar el valor de $L$ per tal de controlar el sistema. Aquest càlcul es du a terme, al igual que amb l'observador normal, amb la formula d'Ackermann utilitzant aquest cop les matrius ampliades $\Phi_w$ i $C_w$. S'ha de tenir en compte a l'hora d'estructurar el sistema complerts que els estats $x_{k+1}$ s'utilitzen com sempre en la realimentació \eqref{eq:obs_u}, mentre que la sortida $w_k$ s'introdueix al sistema com a \textit{feedforward}.
+
+En aquest informe es pretén dur a terme el control amb refús de pertorbacions tant constants, com sinusoïdals. A continuació s'expliquen els passos que s'han seguit per aconseguir-ho.
+
 \subsection{Pertorbació constant}
 
-\subsection{Pertorbació sinusoïdal}
+En el cas de les pertorbacions constants, el model que les defineix és \eqref{eq:pert_const}. Per tant, el model de l'observador queda com \eqref{eq:pert_const_model_mat}. Posteriorment, s'aplica la formula d'Ackermann resultant $L=\begin{bmatrix}
+0.71467\\
+-0.12109\\
+0.00614
+\end{bmatrix}$
+
+\begin{equation}\label{eq:pert_const}
+\left\{
+\begin{array}{lr}
+\dot{x}^d_k = x^d_k\\
+w_k = x^d_k
+\end{array}
+\right.
+\end{equation}
+
+\begin{equation}\label{eq:pert_const_model_mat}
+\left\{
+\begin{array}{lr}
+\begin{bmatrix}
+x_{k+1}\\
+w_{k+1}
+\end{bmatrix} = 
+\begin{bmatrix}
+\Phi & \Gamma \\
+0 & 1
+\end{bmatrix} \begin{bmatrix}
+x_{k+1}\\
+w_k
+\end{bmatrix} + 
+\begin{bmatrix}
+\Gamma\\
+0
+\end{bmatrix} u_k\\
+y_k=\begin{bmatrix}
+C & 0
+\end{bmatrix} \begin{bmatrix}
+x_{k+1}\\
+w_k
+\end{bmatrix}
+\end{array}
+\right.
+\end{equation}
 
 \subsection{Pertorbació constant i sinusoïdal}
 

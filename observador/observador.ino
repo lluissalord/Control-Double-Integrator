@@ -7,9 +7,9 @@ float ref=-1.5; //Canviat en -0.5 V
 float u=0;
 int cont=0;
 int h=50; //Sampling rate
-float Nx[2]={1,0};// Fill the gap
-float Nu=0 ;// Fill the gap
-float K[2]={0.5398,-0.6518};//Fill the gap
+float Nx[2]={1,0};
+float Nu=0;
+float K[2]={0.5398,-0.6518};
 unsigned long timeIn=0;
 unsigned long timeOut=0;
 char intoutputbytes[12]; char floatoutputbytes[12];
@@ -57,11 +57,8 @@ v1=v1-2.5; //-2.5 a 2.5
 v2=v2value*5./1023;
 v2=v2-2.5;
 
-//Test
-//x1=v1;
-//x2=v2;
 
-u=K[0]*(Nx[0]*ref-x1) + K[1]*(Nx[1]*ref-x2); //Provar agafant v1
+u=K[0]*(Nx[0]*ref-x1) + K[1]*(Nx[1]*ref-x2);
 u=u+Nu*ref;
 x1k=x1;
 
@@ -69,9 +66,6 @@ x1=(gam[0]*u+L[0]*(v1-x1k)+x1k*phi[0]+x2*phi[1]);
 x2=(gam[1]*u+L[1]*(v1-x1k)+x1k*phi[2]+x2*phi[3]);
 
 u=u+2.5;
-
-u=u*255./5;
-//if(u<0){u=0;}
 analogWrite(PWMport,u);
 
 
