@@ -424,15 +424,15 @@ Un cop s'ha implementat el codi, s'estudien les sortides per tal de veure si el 
 
 \section{Control amb refús de pertorbació}
 
-El control amb refús de pertorbacions d'un determinat tipus de soroll també es pot entendre com un control per seguir una referència d'aquest mateix tipus. Realment el que s'aconsegueix amb aquest tipus de control és que si l'error que s'està donant és de la forma que es pretén refusar o seguir, doncs ho aconseguirà de forma perfecta. Per això, és pretén estimar la pertorbació $w$ i aquesta compensar-la amb l'estimació $\bar{w}$ on s'intenta aconseguir $\bar{w}=w$.
+El control amb refús de pertorbacions d'un determinat tipus de soroll també es pot entendre com un control per seguir una referència d'aquest mateix tipus. Realment, el que s'aconsegueix amb aquest tipus de control és que si l'error que s'està donant és de la forma que es pretén refusar o seguir, doncs s'aconseguix de forma perfecta. Per això, és pretén estimar la pertorbació $w$ i aquesta compensar-la amb l'estimació $\bar{w}$, on s'intenta aconseguir $\bar{w}=w$.
 
 La base teòrica d'aquest control és estimar $w$, per fer-ho s'ha de modelar segons \eqref{eq:pert_cont} on $F^d$ i $C^d$ són les matrius que modelen la pertorbació i $x^d$ els estats. 
 
 \begin{equation}\label{eq:pert_cont}
 \left\{
 \begin{array}{lr}
-\dot{x}^d_k = \Phi^d x^d_k\\
-w_k=C^d x^d_k
+\dot{x}^d = F^d x^d\\
+w=C^d x^d
 \end{array}
 \right.
 \end{equation}
@@ -448,8 +448,9 @@ w_k=C^d x^d_k
 \right.
 \end{equation}
 
-Un cop modelada la pertorbació $w_k$, aquesta s'ha d'incorporar al model general de tal manera que queda de la forma \eqref{eq:pert_model} que es pot reescriure amb forma matricial com \eqref{eq:pert_model_mat}
+Un cop modelada la pertorbació $w_k$\footnote{S'entén per $w_k$ l'estimació $\bar{w}$ de la pertorbació $w$ en discret. Aquesta nomenclatura és utilitzada al llarg de l'informe.}, aquesta s'ha d'incorporar al model general de tal manera que queda de la forma \eqref{eq:pert_model} que es pot reescriure amb forma matricial com \eqref{eq:pert_model_mat}
 
+\vspace{-19pt}
 \begin{equation}\label{eq:pert_model}
 \left\{
 \begin{array}{lr}
@@ -493,7 +494,38 @@ x^d_{k}
 \right.
 \end{equation}
 
-Al tenir l'observador amb l'estimació de la pertorbació, tan sols cal trobar el valor de $L$ per tal de controlar el sistema. Aquest càlcul es du a terme, al igual que amb l'observador normal, amb la formula d'Ackermann utilitzant aquest cop les matrius ampliades $\Phi_w$ i $C_w$. S'ha de tenir en compte a l'hora d'estructurar el sistema complerts que els estats $x_{k+1}$ s'utilitzen com sempre en la realimentació \eqref{eq:obs_u}, mentre que la sortida $w_k$ s'introdueix al sistema com a \textit{feedforward}.
+Al tenir l'observador amb l'estimació de la pertorbació, tan sols cal trobar el valor de $L$ per tal de controlar el sistema. Aquest càlcul es du a terme, al igual que amb l'observador normal, amb la formula d'Ackermann utilitzant aquest cop les matrius ampliades $\Phi_w$ i $C_w$. S'ha de tenir en compte a l'hora d'estructurar el sistema complerts que els estats $x_{k+1}$ s'utilitzen com sempre en la realimentació \eqref{eq:obs_u}, mentre que la sortida $w_k$ s'introdueix al sistema com a \textit{feedforward}. Per altra banda, el sistema queda definit per les equacions \eqref{eq:pert_model_glob}, que equivalen al model de \texttt{Simulink} de la figura \ref{fig:pert_sim}.
+
+\begin{equation}\label{eq:pert_model_glob}
+\left\{
+\begin{array}{lr}
+u_k=K_{dis} (N_x \cdot r - \bar{x}_{k}) + N_u \cdot r - w_k\\
+\begin{bmatrix}
+\bar{x}_{k+1}\\
+\bar{x}^d_{k+1}
+\end{bmatrix} = \Phi_w \begin{bmatrix}
+\bar{x}_{k}\\
+\bar{x}^d_{k}
+\end{bmatrix} + \Gamma_w u_k + L (y_k - C_g \begin{bmatrix}
+\bar{x}_{k}\\
+\bar{x}^d_{k}
+\end{bmatrix})
+\end{array}
+\right.
+\end{equation} 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/pert_sim.pdf}
+\caption{Model de simulació del sistema amb control am refús de pertorbacions\label{fig:pert_sim}}
+\end{figure}
+
+D'aquest model de simulació per \texttt{Simulink}, cal comentar uns quants detalls.
+\begin{enumerate}
+\item S'han posat diferents tipus de pertorbacions, per comprovar com d'acurat és el refús, tot i que no s'apliquen tots en tots els gràfics. En cadascun dels gràfics s'especifica quin tipus de pertorbacions s'hi han aplicat.
+\item Els blocs anomenats \texttt{phi}, \texttt{gamma} i \texttt{C\_obs}; corresponen a les matrius ampliades $\Phi_w$, $\Gamma_w$ i $C_w$.
+\item Segons el tipus de pertorbacions que es pretén refusar, la dimensió de les matrius canvia. Ara bé, si es segueixen les equacions com s'han expressat al llarg del treball, les úniques que s'han de modificar segons la pertorbació són les de la realimentació d'estats observats i la del \textit{feedforward}, per tal d'utilitzar els estats corresponents.
+\end{enumerate}
 
 En aquest informe es pretén dur a terme el control amb refús de pertorbacions tant constants, com sinusoïdals. A continuació s'expliquen els passos que s'han seguit per aconseguir-ho.
 
@@ -541,6 +573,26 @@ w_k
 \end{array}
 \right.
 \end{equation}
+
+Aleshores, amb les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ de \eqref{eq:pert_const_model_mat} i el vector $L$ calculat, es procedeix a la simulació del model \ref{fig:pert_sim} amb \texttt{Simulink}.
+
+En primer lloc es representa el model amb només la pertorbació d'un \textit{step}, de tal manera que sense el refús de pertorbacions la sortida es quedaria \textit{offsetejada} segons l'amplitud de l'\textit{step}\footnote{L'amplitud d'aquest \textit{step} és aproximadament l'\textit{offset} de la planta real observat en la figura \ref{fig:obs_offset}}. La figura \ref{fig:pert_ct_all_sim_pols_imag_no_sin} mostra els diferents valors d'aquest cas\footnote{Mencionar que la variable del gràfic anomenat $X_3$ és l'estimació $w_k$ del sistema.}. Com es comprova, la sortida es troba perfectament situada sobre la referència, per tant l'\textit{offset} no afecta amb aquest control.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/pert_ct_all_sim_pols_imag_no_sin.eps}
+\caption{Dades de la simulació amb control amb refús de pertorbacions constants amb un \textit{step}\label{fig:pert_ct_all_sim_pols_imag_no_sin}}
+\end{figure}
+
+Per altra banda, es planteja veure que tal és el control si s'introdueix, a més, una pertorbació de tipus sinusoïdal\footnote{Més endavant s'expliquen les característiques d'aquesta sinusoïdal que és una aproximació del soroll a la planta real.}. Aquest és el cas de la figura \ref{fig:pert_ct_all_sim_pols_imag_sin}. Com es pot comprovar, aquest control no permet seguir de forma adequada senyals de tipus sinusoïdals, per tant, si es té un soroll d'aquest tipus aquest no és refusa, al menys amb aquest control.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/pert_ct_all_sim_pols_imag_sin.eps}
+\caption{Dades de la simulació amb control amb refús de pertorbacions constants amb un \textit{step} i una sinusoïdal\label{fig:pert_ct_all_sim_pols_imag_sin}}
+\end{figure}
+
+Un cop s'ha comprovat la implementació en \texttt{Simulink} es procedeix a la implementació en l'Arduino. 
 
 \subsection{Pertorbació constant i sinusoïdal}
 
