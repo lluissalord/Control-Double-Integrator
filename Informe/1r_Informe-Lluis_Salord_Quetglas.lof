@@ -14,4 +14,7 @@
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Model de simulaci\IeC {\'o} del sistema amb control am ref\IeC {\'u}s de pertorbacions\relax }}{23}{figure.caption.16}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Dades de la simulaci\IeC {\'o} amb control amb ref\IeC {\'u}s de pertorbacions constants amb un \textit {step}\relax }}{24}{figure.caption.17}
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Dades de la simulaci\IeC {\'o} amb control amb ref\IeC {\'u}s de pertorbacions constants amb un \textit {step} i una sinuso\IeC {\@umlaut \i }dal\relax }}{24}{figure.caption.18}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Dades de l'Arduino amb control amb ref\IeC {\'u}s de pertorbacions constants\relax }}{25}{figure.caption.19}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Densitat espectral de la senyal $V_1$, amb una refer\IeC {\`e}ncia constant\relax }}{26}{figure.caption.20}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Densitat espectral de la senyal $V_1$ menys la mitja, amb una refer\IeC {\`e}ncia constant\relax }}{26}{figure.caption.21}
 \addvspace {10\p@ }

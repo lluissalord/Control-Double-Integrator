@@ -557,7 +557,7 @@ w_{k+1}
 \Phi & \Gamma \\
 0 & 1
 \end{bmatrix} \begin{bmatrix}
-x_{k+1}\\
+x_{k}\\
 w_k
 \end{bmatrix} + 
 \begin{bmatrix}
@@ -567,14 +567,14 @@ w_k
 y_k=\begin{bmatrix}
 C & 0
 \end{bmatrix} \begin{bmatrix}
-x_{k+1}\\
+x_{k}\\
 w_k
 \end{bmatrix}
 \end{array}
 \right.
 \end{equation}
 
-Aleshores, amb les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ de \eqref{eq:pert_const_model_mat} i el vector $L$ calculat, es procedeix a la simulació del model \ref{fig:pert_sim} amb \texttt{Simulink}.
+Aleshores, amb les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ de \eqref{eq:pert_const_model_mat} i el vector $L$ calculat, amb l'ús de \eqref{eq:pert_model_glob} es procedeix a la simulació del model \ref{fig:pert_sim} amb \texttt{Simulink}.
 
 En primer lloc es representa el model amb només la pertorbació d'un \textit{step}, de tal manera que sense el refús de pertorbacions la sortida es quedaria \textit{offsetejada} segons l'amplitud de l'\textit{step}\footnote{L'amplitud d'aquest \textit{step} és aproximadament l'\textit{offset} de la planta real observat en la figura \ref{fig:obs_offset}}. La figura \ref{fig:pert_ct_all_sim_pols_imag_no_sin} mostra els diferents valors d'aquest cas\footnote{Mencionar que la variable del gràfic anomenat $X_3$ és l'estimació $w_k$ del sistema.}. Com es comprova, la sortida es troba perfectament situada sobre la referència, per tant l'\textit{offset} no afecta amb aquest control.
 
@@ -592,9 +592,105 @@ Per altra banda, es planteja veure que tal és el control si s'introdueix, a mé
 \caption{Dades de la simulació amb control amb refús de pertorbacions constants amb un \textit{step} i una sinusoïdal\label{fig:pert_ct_all_sim_pols_imag_sin}}
 \end{figure}
 
-Un cop s'ha comprovat la implementació en \texttt{Simulink} es procedeix a la implementació en l'Arduino. 
+Un cop s'ha comprovat la implementació en \texttt{Simulink} es procedeix a la implementació en l'Arduino. Tan sols s'han d'implementar les equacions \eqref{eq:pert_model_glob} amb les matrius $\Phi_w$ i $\Gamma_w$ calculades de \eqref{eq:pert_const_model_mat} i la $L$ calculada per Ackermann. A partir d'aquesta implementació en surt el gràfic \ref{fig:pert_ct_all_pols_imag} amb totes les dades que es poden extreure. Es pot veure, com aquest cop la sortida no té cap mena d'\textit{offset} respecte la referència que ha de seguir.
+
+Ara bé, es cert que en les figures \ref{fig:obs_all} i \ref{fig:obs_offset}, on es pot veure l'\textit{offset} quan no hi ha refús de pertorbacions constants, no es molt notable aquest fet. Per tant, per comprovar que no fos casualitat que justament la placa no tingués \textit{offset} o que fos inapreciable, s'ha fet el test d'introduir el codi "\texttt{u=u+0.1}", després del càlcul però abans d'enviar-lo pel \texttt{PWM}. Amb això s'aconsegueix que estar segur que existeix una pertorbació constant i si la refusa significa que el control funciona de forma adequada. S'ha fet el test i ha funcionat a la perfecció.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/pert_ct_all_pols_imag.eps}
+\caption{Dades de l'Arduino amb control amb refús de pertorbacions constants\label{fig:pert_ct_all_pols_imag}}
+\end{figure}
 
 \subsection{Pertorbació constant i sinusoïdal}
+
+Tot i que amb el refús de pertorbacions constants ja s'ha aconseguit seguir de forma acurada la referència, existeix un cert soroll oscil·lant que si es pogués eliminar milloraria la resposta. Per fer-ho, es podria mirar de fer de diverses formes, la que es planteja aquí es utilitzar el refús de pertorbacions sinusoïdal, ara bé, a una freqüència determinada.
+
+Aquest tipus de control permet seguir o refusar una senyal de tipus sinusoïdal, però només d'una freqüència determinada, si es desitgés fer-ho a més freqüències s'haurien d'ampliar les variables d'estat en 2 més per cada freqüència desitjada, i per tant, també ampliar les respectives matrius $\Phi_w$, $\Gamma_w$, $C_w$ i el vector $L$ de la forma corresponent. Si fos el cas un altra mètode per seguir o refusar un conjunt de sinusoïdals és el que es planteja en la següent secció \ref{sec:pert_rang_sin}.
+
+A l'hora de determinar quina freqüència s'havia de refusar en primera instància s'ha decidit escollir-la amb l'ús de la transformada de Fourier. Per fer-ho s'ha donat una referència constant i a través de fer la transformada de Fourier de les dades d'un període suficientment llarg s'ha extret el gràfic \ref{fig:power_spectral_mean} de la sortida $V_1$. El problema d'aquest gràfic és que amb el no ser constant a un valor diferent de 0, el que predomina és l'estacionari en aquest valor, per tant, s'ha de restar la mitja a la sortida $V_1$ per extreure un gràfic que aporti informació, com el de la figura \ref{fig:power_spectral_nomean_bef_sin_pols_imag}. Per tant, es veu com les freqüències al voltant de $2.4$ Hz són les que tenen més potència i, per tant, la que s'intenta refusar.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/power_spectral_mean.eps}
+\caption{Densitat espectral de la senyal $V_1$, amb una referència constant\label{fig:power_spectral_mean}}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/power_spectral_nomean_bef_sin_pols_imag.eps}
+\caption{Densitat espectral de la senyal $V_1$ menys la mitja, amb una referència constant\label{fig:power_spectral_nomean_bef_sin_pols_imag}}
+\end{figure}
+
+\vspace{100pt}
+Un cop escollida la freqüència a refusar, s'han de plantejar les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ que modelen la pertorbació constant i sinusoïdal. El cas de la constant, s'ha definit el seu model en \eqref{eq:pert_const}. Per altra banda, el d'una sinusoïdal en continu és \eqref{eq:pert_sin_cont}, depenent de la freqüència $w_0$ expressada en radians per segon. Tot i que, per a ser utilitzat s'ha de passar a discret amb $\Phi_{w_2}=e^{F_{w_2} T_s}$ sent el període de mostratge $T_s=0.05$ s.\footnote{Al llarg de l'informe es fa referència a les matrius corresponents a les pertorbacions constants amb el subíndex $w_1$ i a les de les pertorbacions sinusoïdals amb subíndex $w_2$.}
+
+\begin{equation}\label{eq:pert_sin_cont}
+\begin{bmatrix}
+\dot{w}\\
+\ddot{w}
+\end{bmatrix} = \begin{bmatrix}
+0 & 1\\
+w_0^2 & 0
+\end{bmatrix} \begin{bmatrix}
+w\\
+\dot{w}
+\end{bmatrix} = F_{w_2} \begin{bmatrix}
+w\\
+\dot{w}
+\end{bmatrix}
+\end{equation}
+
+Per tant, si s'acoblen les diferents matrius de les pertorbacions constants i sinusoïdals, dona com a resultat el model del sistema expressat en les equacions \eqref{eq:pert_const_model_mat}. En el moment que es tenen les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ ja es pot utilitzar la formula d'Ackermann per calcular $L$ i les equacions \eqref{eq:pert_model_glob} per definir l'observador.
+
+
+\begin{equation}\label{eq:pert_const_model_mat}
+\left\{
+\begin{array}{lr}
+\begin{bmatrix}
+x_{k+1}\\
+w_{k+1}^{d_1}\\
+w_{k+1}^{d_2}\\
+\dot{w}_{k+1}^{d_2}
+\end{bmatrix} = 
+\begin{bmatrix}
+\Phi & \Gamma & \Gamma & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & a_{11} & a_{12}\\
+0 & 0 & a_{21} & a_{22}
+\end{bmatrix} \begin{bmatrix}
+x_{k}\\
+w_k^{d_1}\\
+w_k^{d_2}\\
+\dot{w}_k^{d_2}
+\end{bmatrix} + 
+\begin{bmatrix}
+\Gamma\\
+0\\
+0\\
+0
+\end{bmatrix} u_k\\
+
+y_k=\begin{bmatrix}
+C & 0 & 0 & 0
+\end{bmatrix} \begin{bmatrix}
+x_{k}\\
+w_k^{d_1}\\
+w_k^{d_2}\\
+\dot{w}_k^{d_2}
+\end{bmatrix}\\
+
+\Phi_{w_2}=\begin{bmatrix}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{bmatrix}
+
+\end{array}
+\right.
+\end{equation}
+
+\subsection{Pertorbacions d'un rang de freqüències sinusoïdals}
+\label{sec:pert_rang_sin}
 
 \section{Ús de pols reals de l'observador}
 %S'ha vist que hi ha unes freqüencies molt altes i s'ha pensat en que poden ser degudes als pols de l'observador que s'han posat, per això es decideix a procedir amb l'ús de pols reals en lloc dels proposats a l'inici.
