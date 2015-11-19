@@ -1,0 +1,10 @@
+function V_nomean=V_nomean(V,Npulses,startId,endId)
+%Treu la mitja d'una senyal que vengui donada per pulsos
+lastId=length(V);
+
+V_nomean=zeros(1,1);
+for i=0:floor(lastId/Npulses)
+    %Si sobra temps ja ho faré optim
+    V_nomean = [V_nomean; V(i*Npulses+startId:i*Npulses+endId)-mean(V(i*Npulses+startId:i*Npulses+endId))];
+end
+end
