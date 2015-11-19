@@ -1,23 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.17)  19 NOV 2015 12:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.25)  19 NOV 2015 13:30
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **1r_Informe-Lluis_Salord_Quetglas.tex
-
-("D:\Lluis\Documents\Industrials\Q3 Master\Tec Control\1r Control - Doble Integ
-rador\Informe\1r_Informe-Lluis_Salord_Quetglas.tex"
+(./1r_Informe-Lluis_Salord_Quetglas.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -33,19 +24,19 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -195,7 +186,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -226,7 +217,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -250,27 +241,21 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\catalan.ldf"
+(/usr/share/texlive/texmf-dist/tex/generic/babel-catalan/catalan.ldf
 Language: catalan 2005/03/29 v2.2p Catalan support from the babel system
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
@@ -279,34 +264,34 @@ Package babel Info: Making " an active character on input line 91.
 \rightllkern=\dimen105
 \raiselldim=\dimen106
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count89
@@ -314,10 +299,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen107
 \Gin@req@width=\dimen108
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen109
@@ -330,24 +315,24 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 )
 \c@ContinuedFloat=\count90
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen116
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen117
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count91
@@ -388,16 +373,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -428,7 +413,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -436,27 +421,27 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen125
 \Hy@linkcounter=\count103
 \Hy@pagecounter=\count104
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count105
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `final' set `true' on input line 4319.
@@ -469,9 +454,9 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count106
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen126
@@ -494,33 +479,37 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count111
 \c@bookmark@seq@number=\count112
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip46
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count113
 \Gm@cntv=\count114
@@ -534,9 +523,8 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layouthoffset=\dimen135
 \Gm@layoutvoffset=\dimen136
 \Gm@dimlist=\toks22
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip47
 \f@ncyO@elh=\skip48
 \f@ncyO@erh=\skip49
@@ -547,30 +535,31 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \f@ncyO@olf=\skip54
 \f@ncyO@orf=\skip55
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@pps=\count116
 \c@@ppsavesec=\count117
 \c@@ppsaveapp=\count118
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
-Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\misc\etex.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \et@xins=\count119
 )
 \etb@tempcnta=\count120
 )
-("D:\Lluis\Documents\Industrials\Q3 Master\Tec Control\1r Control - Doble Integ
-rador\Informe\1r_Informe-Lluis_Salord_Quetglas.aux"
+(./1r_Informe-Lluis_Salord_Quetglas.aux
 
 LaTeX Warning: Label `eq:pert_const_model_mat' multiply defined.
 
 )
+\openout1 = `1r_Informe-Lluis_Salord_Quetglas.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
@@ -587,7 +576,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
 LaTeX Info: Redefining \l on input line 59.
 LaTeX Info: Redefining \L on input line 59.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count121
 \scratchdimen=\dimen137
@@ -606,10 +595,10 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box29
 Package hyperref Info: Link coloring OFF on input line 59.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count127
@@ -618,11 +607,11 @@ LaTeX Info: Redefining \ref on input line 59.
 LaTeX Info: Redefining \pageref on input line 59.
 LaTeX Info: Redefining \nameref on input line 59.
 
-("D:\Lluis\Documents\Industrials\Q3 Master\Tec Control\1r Control - Doble Integ
-rador\Informe\1r_Informe-Lluis_Salord_Quetglas.out")
-("D:\Lluis\Documents\Industrials\Q3 Master\Tec Control\1r Control - Doble Integ
-rador\Informe\1r_Informe-Lluis_Salord_Quetglas.out")
+(./1r_Informe-Lluis_Salord_Quetglas.out)
+(./1r_Informe-Lluis_Salord_Quetglas.out)
 \@outlinefile=\write3
+\openout3 = `1r_Informe-Lluis_Salord_Quetglas.out'.
+
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -660,14 +649,14 @@ rador\Informe\1r_Informe-Lluis_Salord_Quetglas.out")
 
 [1
 
-{C:/Users/Lluis/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.73 \end{abstract}
-                    [1] <Imatges/etseib.png, id=82, 65.043pt x 85.0377pt>
+                    [1] <Imatges/etseib.png, id=83, 65.043pt x 85.0377pt>
 File: Imatges/etseib.png Graphic file (type png)
 
 <use Imatges/etseib.png>
@@ -680,35 +669,35 @@ been already used, duplicate ignored
 l.75 \tableofcontents
                       [2
 
- <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble Integ
-rador/Informe/Imatges/etseib.png>]
-("D:\Lluis\Documents\Industrials\Q3 Master\Tec Control\1r Control - Doble Integ
-rador\Informe\1r_Informe-Lluis_Salord_Quetglas.toc")
+ <./Imatges/etseib.png>]
+(./1r_Informe-Lluis_Salord_Quetglas.toc)
 \tf@toc=\write4
+\openout4 = `1r_Informe-Lluis_Salord_Quetglas.toc'.
+
 File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 77.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
-
-[3]
+ [3]
 File: Imatges/etseib.png Graphic file (type png)
- <use Imatges/etseib.png>
+
+<use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 77.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [4
 
-]
-("D:\Lluis\Documents\Industrials\Q3 Master\Tec Control\1r Control - Doble Integ
-rador\Informe\1r_Informe-Lluis_Salord_Quetglas.lof"
+] (./1r_Informe-Lluis_Salord_Quetglas.lof
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 3.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
 )
 \tf@lof=\write5
+\openout5 = `1r_Informe-Lluis_Salord_Quetglas.lof'.
+
 File: Imatges/etseib.png Graphic file (type png)
 
 <use Imatges/etseib.png>
@@ -722,17 +711,18 @@ Package pdftex.def Info: Imatges/etseib.png used on input line 79.
  [6
 
 ]
-("D:\Lluis\Documents\Industrials\Q3 Master\Tec Control\1r Control - Doble Integ
-rador\Informe\1r_Informe-Lluis_Salord_Quetglas.lot")
+(./1r_Informe-Lluis_Salord_Quetglas.lot)
 \tf@lot=\write6
+\openout6 = `1r_Informe-Lluis_Salord_Quetglas.lot'.
+
 File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 81.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
-
-[7]
+ [7]
 File: Imatges/etseib.png Graphic file (type png)
- <use Imatges/etseib.png>
+
+<use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 81.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [8
@@ -740,10 +730,10 @@ Package pdftex.def Info: Imatges/etseib.png used on input line 81.
 ]
 Cap\'{\i }tol 1.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 87.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<Imatges/circuit_scheme.png, id=175, 725.71124pt x 248.42813pt>
+<Imatges/circuit_scheme.png, id=177, 725.71124pt x 248.42813pt>
 File: Imatges/circuit_scheme.png Graphic file (type png)
 
 <use Imatges/circuit_scheme.png>
@@ -759,10 +749,10 @@ File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 170.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [10 <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble I
-ntegrador/Informe/Imatges/circuit_scheme.png (PNG copy)>]
+ [10 <./Imatges/circuit_scheme.png (PNG copy)>]
 File: Imatges/etseib.png Graphic file (type png)
- <use Imatges/etseib.png>
+
+<use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 188.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [11]
@@ -772,7 +762,7 @@ Package pdftex.def Info: Imatges/etseib.png used on input line 192.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [12]
 Cap\'{\i }tol 2.
-<Imatges/cont_sim_scheme.pdf, id=213, 666.44987pt x 250.41554pt>
+<Imatges/cont_sim_scheme.pdf, id=215, 666.44987pt x 250.41554pt>
 File: Imatges/cont_sim_scheme.pdf Graphic file (type pdf)
 
 <use Imatges/cont_sim_scheme.pdf>
@@ -784,20 +774,19 @@ Package pdftex.def Info: Imatges/etseib.png used on input line 207.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [13
 
- <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble Integ
-rador/Informe/Imatges/cont_sim_scheme.pdf>]
+ <./Imatges/cont_sim_scheme.pdf>]
 Package epstopdf Info: Source file: <Imatges/cont_sim.eps>
 (epstopdf)                    date: 2015-11-09 20:02:57
 (epstopdf)                    size: 185740 bytes
 (epstopdf)             Output file: <Imatges/cont_sim-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-11-09 20:29:21
 (epstopdf)                    size: 10602 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/cont_sim-eps-conver
-ted-to.pdf Imatges/cont_sim.eps>
+(epstopdf)             Command: <repstopdf --outfile=Imatges/cont_sim-eps-conve
+rted-to.pdf Imatges/cont_sim.eps>
 (epstopdf)             \includegraphics on input line 264.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/cont_sim-eps-converted-to.pdf, id=233, 979.66pt x 518.93875pt>
+<Imatges/cont_sim-eps-converted-to.pdf, id=235, 979.66pt x 518.93875pt>
 File: Imatges/cont_sim-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/cont_sim-eps-converted-to.pdf>
@@ -814,9 +803,8 @@ File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 287.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [15 <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble I
-ntegrador/Informe/Imatges/cont_sim-eps-converted-to.pdf>] <Imatges/dis_sim_sche
-me.pdf, id=273, 707.5233pt x 164.2938pt>
+ [15 <./Imatges/cont_sim-eps-converted-to.pdf>]
+<Imatges/dis_sim_scheme.pdf, id=275, 707.5233pt x 164.2938pt>
 File: Imatges/dis_sim_scheme.pdf Graphic file (type pdf)
 
 <use Imatges/dis_sim_scheme.pdf>
@@ -828,12 +816,12 @@ Package epstopdf Info: Source file: <Imatges/dis_sim.eps>
 (epstopdf)             Output file: <Imatges/dis_sim-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-11-11 12:54:41
 (epstopdf)                    size: 35728 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/dis_sim-eps-convert
-ed-to.pdf Imatges/dis_sim.eps>
+(epstopdf)             Command: <repstopdf --outfile=Imatges/dis_sim-eps-conver
+ted-to.pdf Imatges/dis_sim.eps>
 (epstopdf)             \includegraphics on input line 308.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/dis_sim-eps-converted-to.pdf, id=274, 979.66pt x 518.93875pt>
+<Imatges/dis_sim-eps-converted-to.pdf, id=276, 979.66pt x 518.93875pt>
 File: Imatges/dis_sim-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/dis_sim-eps-converted-to.pdf>
@@ -844,12 +832,10 @@ File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 312.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [16 <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble I
-ntegrador/Informe/Imatges/dis_sim_scheme.pdf> <D:/Lluis/Documents/Industrials/Q
-3 Master/Tec Control/1r Control - Doble Integrador/Informe/Imatges/dis_sim-eps-
-converted-to.pdf>]
+ [16 <./Imatges/dis_sim_scheme.pdf> <./Imatges/dis_sim-eps-converted-to.pdf>]
 File: Imatges/etseib.png Graphic file (type png)
- <use Imatges/etseib.png>
+
+<use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 344.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [17]
@@ -859,12 +845,12 @@ Package epstopdf Info: Source file: <Imatges/dis_all.eps>
 (epstopdf)             Output file: <Imatges/dis_all-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-11-09 20:29:25
 (epstopdf)                    size: 15143 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/dis_all-eps-convert
-ed-to.pdf Imatges/dis_all.eps>
+(epstopdf)             Command: <repstopdf --outfile=Imatges/dis_all-eps-conver
+ted-to.pdf Imatges/dis_all.eps>
 (epstopdf)             \includegraphics on input line 351.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/dis_all-eps-converted-to.pdf, id=306, 979.66pt x 518.93875pt>
+<Imatges/dis_all-eps-converted-to.pdf, id=309, 979.66pt x 518.93875pt>
 File: Imatges/dis_all-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/dis_all-eps-converted-to.pdf>
@@ -879,9 +865,8 @@ File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 370.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [18 <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble I
-ntegrador/Informe/Imatges/dis_all-eps-converted-to.pdf>] <Imatges/obs_sim_schem
-e.pdf, id=329, 752.57161pt x 366.89069pt>
+ [18 <./Imatges/dis_all-eps-converted-to.pdf>]
+<Imatges/obs_sim_scheme.pdf, id=332, 752.57161pt x 366.89069pt>
 File: Imatges/obs_sim_scheme.pdf Graphic file (type pdf)
 
 <use Imatges/obs_sim_scheme.pdf>
@@ -893,12 +878,12 @@ Package epstopdf Info: Source file: <Imatges/obs_all_sim.eps>
 (epstopdf)             Output file: <Imatges/obs_all_sim-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-11-15 21:32:45
 (epstopdf)                    size: 40126 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/obs_all_sim-eps-con
-verted-to.pdf Imatges/obs_all_sim.eps>
+(epstopdf)             Command: <repstopdf --outfile=Imatges/obs_all_sim-eps-co
+nverted-to.pdf Imatges/obs_all_sim.eps>
 (epstopdf)             \includegraphics on input line 397.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/obs_all_sim-eps-converted-to.pdf, id=331, 979.66pt x 518.93875pt>
+<Imatges/obs_all_sim-eps-converted-to.pdf, id=334, 979.66pt x 518.93875pt>
 File: Imatges/obs_all_sim-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/obs_all_sim-eps-converted-to.pdf>
@@ -920,12 +905,12 @@ Package epstopdf Info: Source file: <Imatges/obs_all.eps>
 (epstopdf)             Output file: <Imatges/obs_all-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-11-16 09:19:12
 (epstopdf)                    size: 19622 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/obs_all-eps-convert
-ed-to.pdf Imatges/obs_all.eps>
+(epstopdf)             Command: <repstopdf --outfile=Imatges/obs_all-eps-conver
+ted-to.pdf Imatges/obs_all.eps>
 (epstopdf)             \includegraphics on input line 415.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/obs_all-eps-converted-to.pdf, id=343, 979.66pt x 518.93875pt>
+<Imatges/obs_all-eps-converted-to.pdf, id=346, 979.66pt x 518.93875pt>
 File: Imatges/obs_all-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/obs_all-eps-converted-to.pdf>
@@ -942,11 +927,11 @@ Package epstopdf Info: Source file: <Imatges/obs_offset.eps>
 (epstopdf)             Output file: <Imatges/obs_offset-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-11-16 09:19:13
 (epstopdf)                    size: 11494 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/obs_offset-eps-conv
-erted-to.pdf Imatges/obs_offset.eps>
+(epstopdf)             Command: <repstopdf --outfile=Imatges/obs_offset-eps-con
+verted-to.pdf Imatges/obs_offset.eps>
 (epstopdf)             \includegraphics on input line 421.
 Package epstopdf Info: Output file is already uptodate.
-<Imatges/obs_offset-eps-converted-to.pdf, id=344, 979.66pt x 518.93875pt>
+<Imatges/obs_offset-eps-converted-to.pdf, id=347, 979.66pt x 518.93875pt>
 File: Imatges/obs_offset-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/obs_offset-eps-converted-to.pdf>
@@ -961,20 +946,15 @@ File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 428.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [20 <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble I
-ntegrador/Informe/Imatges/obs_sim_scheme.pdf> <D:/Lluis/Documents/Industrials/Q
-3 Master/Tec Control/1r Control - Doble Integrador/Informe/Imatges/obs_all_sim-
-eps-converted-to.pdf>]
+ [20 <./Imatges/obs_sim_scheme.pdf> <./Imatges/obs_all_sim-eps-converted-to.pdf
+>]
 File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 441.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
-
-[21 <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble In
-tegrador/Informe/Imatges/obs_all-eps-converted-to.pdf> <D:/Lluis/Documents/Indu
-strials/Q3 Master/Tec Control/1r Control - Doble Integrador/Informe/Imatges/obs
-_offset-eps-converted-to.pdf>]
-<Imatges/pert_sim.pdf, id=401, 759.31679pt x 451.92839pt>
+ [21 <./Imatges/obs_all-eps-converted-to.pdf> <./Imatges/obs_offset-eps-convert
+ed-to.pdf>]
+<Imatges/pert_sim.pdf, id=404, 759.31679pt x 451.92839pt>
 File: Imatges/pert_sim.pdf Graphic file (type pdf)
 
 <use Imatges/pert_sim.pdf>
@@ -992,8 +972,7 @@ File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 580.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [23 <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble I
-ntegrador/Informe/Imatges/pert_sim.pdf>]
+ [23 <./Imatges/pert_sim.pdf>]
 Package epstopdf Info: Source file: <Imatges/pert_ct_all_sim_pols_imag_no_sin.e
 ps>
 (epstopdf)                    date: 2015-11-11 12:33:44
@@ -1002,13 +981,13 @@ ps>
 ps-converted-to.pdf>
 (epstopdf)                    date: 2015-11-17 11:24:08
 (epstopdf)                    size: 35398 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/pert_ct_all_sim_pol
-s_imag_no_sin-eps-converted-to.pdf Imatges/pert_ct_all_sim_pols_imag_no_sin.eps
->
+(epstopdf)             Command: <repstopdf --outfile=Imatges/pert_ct_all_sim_po
+ls_imag_no_sin-eps-converted-to.pdf Imatges/pert_ct_all_sim_pols_imag_no_sin.ep
+s>
 (epstopdf)             \includegraphics on input line 583.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/pert_ct_all_sim_pols_imag_no_sin-eps-converted-to.pdf, id=442, 979.66p
+<Imatges/pert_ct_all_sim_pols_imag_no_sin-eps-converted-to.pdf, id=446, 979.66p
 t x 518.93875pt>
 File: Imatges/pert_ct_all_sim_pols_imag_no_sin-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1025,12 +1004,12 @@ Package epstopdf Info: Source file: <Imatges/pert_ct_all_sim_pols_imag_sin.eps>
 converted-to.pdf>
 (epstopdf)                    date: 2015-11-17 11:33:59
 (epstopdf)                    size: 82572 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/pert_ct_all_sim_pol
-s_imag_sin-eps-converted-to.pdf Imatges/pert_ct_all_sim_pols_imag_sin.eps>
+(epstopdf)             Command: <repstopdf --outfile=Imatges/pert_ct_all_sim_po
+ls_imag_sin-eps-converted-to.pdf Imatges/pert_ct_all_sim_pols_imag_sin.eps>
 (epstopdf)             \includegraphics on input line 591.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/pert_ct_all_sim_pols_imag_sin-eps-converted-to.pdf, id=445, 979.66pt x
+<Imatges/pert_ct_all_sim_pols_imag_sin-eps-converted-to.pdf, id=449, 979.66pt x
  518.93875pt>
 File: Imatges/pert_ct_all_sim_pols_imag_sin-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1043,10 +1022,8 @@ File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 596.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [24 <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble I
-ntegrador/Informe/Imatges/pert_ct_all_sim_pols_imag_no_sin-eps-converted-to.pdf
-> <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble Inte
-grador/Informe/Imatges/pert_ct_all_sim_pols_imag_sin-eps-converted-to.pdf>]
+ [24 <./Imatges/pert_ct_all_sim_pols_imag_no_sin-eps-converted-to.pdf> <./Imatg
+es/pert_ct_all_sim_pols_imag_sin-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Imatges/pert_ct_all_pols_imag.eps>
 (epstopdf)                    date: 2015-11-09 21:28:36
 (epstopdf)                    size: 233887 bytes
@@ -1054,12 +1031,12 @@ Package epstopdf Info: Source file: <Imatges/pert_ct_all_pols_imag.eps>
 d-to.pdf>
 (epstopdf)                    date: 2015-11-19 09:39:09
 (epstopdf)                    size: 19373 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/pert_ct_all_pols_im
-ag-eps-converted-to.pdf Imatges/pert_ct_all_pols_imag.eps>
+(epstopdf)             Command: <repstopdf --outfile=Imatges/pert_ct_all_pols_i
+mag-eps-converted-to.pdf Imatges/pert_ct_all_pols_imag.eps>
 (epstopdf)             \includegraphics on input line 601.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/pert_ct_all_pols_imag-eps-converted-to.pdf, id=482, 979.66pt x 518.938
+<Imatges/pert_ct_all_pols_imag-eps-converted-to.pdf, id=486, 979.66pt x 518.938
 75pt>
 File: Imatges/pert_ct_all_pols_imag-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1072,8 +1049,7 @@ File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 612.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [25 <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble I
-ntegrador/Informe/Imatges/pert_ct_all_pols_imag-eps-converted-to.pdf>]
+ [25 <./Imatges/pert_ct_all_pols_imag-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Imatges/power_spectral_mean.eps>
 (epstopdf)                    date: 2015-11-19 11:17:22
 (epstopdf)                    size: 290567 bytes
@@ -1081,12 +1057,12 @@ Package epstopdf Info: Source file: <Imatges/power_spectral_mean.eps>
 to.pdf>
 (epstopdf)                    date: 2015-11-19 11:23:47
 (epstopdf)                    size: 9924 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/power_spectral_mean
--eps-converted-to.pdf Imatges/power_spectral_mean.eps>
+(epstopdf)             Command: <repstopdf --outfile=Imatges/power_spectral_mea
+n-eps-converted-to.pdf Imatges/power_spectral_mean.eps>
 (epstopdf)             \includegraphics on input line 615.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/power_spectral_mean-eps-converted-to.pdf, id=499, 1028.84375pt x 490.8
+<Imatges/power_spectral_mean-eps-converted-to.pdf, id=503, 1028.84375pt x 490.8
 3376pt>
 File: Imatges/power_spectral_mean-eps-converted-to.pdf Graphic file (type pdf)
  <use Imatges/power_spectral_mean-eps-converted-to.pdf>
@@ -1101,13 +1077,13 @@ _imag.eps>
 _imag-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-11-19 11:23:48
 (epstopdf)                    size: 18847 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imatges/power_spectral_nome
-an_bef_sin_pols_imag-eps-converted-to.pdf Imatges/power_spectral_nomean_bef_sin
-_pols_imag.eps>
+(epstopdf)             Command: <repstopdf --outfile=Imatges/power_spectral_nom
+ean_bef_sin_pols_imag-eps-converted-to.pdf Imatges/power_spectral_nomean_bef_si
+n_pols_imag.eps>
 (epstopdf)             \includegraphics on input line 621.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/power_spectral_nomean_bef_sin_pols_imag-eps-converted-to.pdf, id=500, 
+<Imatges/power_spectral_nomean_bef_sin_pols_imag-eps-converted-to.pdf, id=504, 
 1028.84375pt x 490.83376pt>
 File: Imatges/power_spectral_nomean_bef_sin_pols_imag-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -1124,12 +1100,11 @@ File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 627.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [26 <D:/Lluis/Documents/Industrials/Q3 Master/Tec Control/1r Control - Doble I
-ntegrador/Informe/Imatges/power_spectral_mean-eps-converted-to.pdf> <D:/Lluis/D
-ocuments/Industrials/Q3 Master/Tec Control/1r Control - Doble Integrador/Inform
-e/Imatges/power_spectral_nomean_bef_sin_pols_imag-eps-converted-to.pdf>]
+ [26 <./Imatges/power_spectral_mean-eps-converted-to.pdf> <./Imatges/power_spec
+tral_nomean_bef_sin_pols_imag-eps-converted-to.pdf>]
 File: Imatges/etseib.png Graphic file (type png)
- <use Imatges/etseib.png>
+
+<use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 705.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [27]
@@ -1137,8 +1112,7 @@ File: Imatges/etseib.png Graphic file (type png)
  <use Imatges/etseib.png>
 Package pdftex.def Info: Imatges/etseib.png used on input line 707.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
-
-[28
+ [28
 
 
 ] [29] [30]
@@ -1152,61 +1126,63 @@ Package pdftex.def Info: Imatges/etseib.png used on input line 711.
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 711.
-
-("D:\Lluis\Documents\Industrials\Q3 Master\Tec Control\1r Control - Doble Integ
-rador\Informe\1r_Informe-Lluis_Salord_Quetglas.aux")
+ (./1r_Informe-Lluis_Salord_Quetglas.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 711.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 711.
-Package rerunfilecheck Info: File `1r_Informe-Lluis_Salord_Quetglas.out' has no
-t changed.
-(rerunfilecheck)             Checksum: 28836BCEFCF0E5980B89A53EEBE075A5;1163.
 
+
+Package rerunfilecheck Warning: File `1r_Informe-Lluis_Salord_Quetglas.out' has
+ changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `1r_Informe-Lluis_Salord_Quetglas.ou
+t':
+(rerunfilecheck)             Before: 28836BCEFCF0E5980B89A53EEBE075A5;1163
+(rerunfilecheck)             After:  DB78DFEFCD7E0C5321CA7AA55FAF5064;1147.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 711.
  ) 
 Here is how much of TeX's memory you used:
- 8775 strings out of 493921
- 131168 string characters out of 3144876
- 226008 words of memory out of 3000000
- 11816 multiletter control sequences out of 15000+200000
- 21733 words of font info for 54 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 36i,15n,43p,1040b,363s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/cm-super/sfbx1200.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/cm-super/sfbx1440.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/cm-super/sfbx1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/cm-super/sfbx2488.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm
--super/sfrm0700.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-su
-per/sfrm0800.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super
-/sfrm1000.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sf
-rm1200.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1
-440.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm2074
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1200.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1000.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on 1r_Informe-Lluis_Salord_Quetglas.pdf (33 pages, 1204236 bytes
+ 8861 strings out of 493304
+ 130438 string characters out of 6139871
+ 233781 words of memory out of 5000000
+ 12064 multiletter control sequences out of 15000+600000
+ 21733 words of font info for 54 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 36i,15n,43p,1040b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on 1r_Informe-Lluis_Salord_Quetglas.pdf (33 pages, 1111304 bytes
 ).
 PDF statistics:
- 670 PDF objects out of 1000 (max. 8388607)
+ 677 PDF objects out of 1000 (max. 8388607)
+ 556 compressed objects within 6 object streams
  100 named destinations out of 1000 (max. 500000)
  214 words of extra memory for PDF output out of 10000 (max. 10000000)
 
