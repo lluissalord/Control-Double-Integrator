@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.25)  19 NOV 2015 13:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.25)  20 NOV 2015 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -553,11 +553,7 @@ Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 )
 \etb@tempcnta=\count120
 )
-(./1r_Informe-Lluis_Salord_Quetglas.aux
-
-LaTeX Warning: Label `eq:pert_const_model_mat' multiply defined.
-
-)
+(./1r_Informe-Lluis_Salord_Quetglas.aux)
 \openout1 = `1r_Informe-Lluis_Salord_Quetglas.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
@@ -576,7 +572,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
 LaTeX Info: Redefining \l on input line 59.
 LaTeX Info: Redefining \L on input line 59.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count121
 \scratchdimen=\dimen137
@@ -733,7 +730,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 87.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<Imatges/circuit_scheme.png, id=177, 725.71124pt x 248.42813pt>
+<Imatges/circuit_scheme.png, id=189, 725.71124pt x 248.42813pt>
 File: Imatges/circuit_scheme.png Graphic file (type png)
 
 <use Imatges/circuit_scheme.png>
@@ -762,7 +759,7 @@ Package pdftex.def Info: Imatges/etseib.png used on input line 192.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [12]
 Cap\'{\i }tol 2.
-<Imatges/cont_sim_scheme.pdf, id=215, 666.44987pt x 250.41554pt>
+<Imatges/cont_sim_scheme.pdf, id=227, 666.44987pt x 250.41554pt>
 File: Imatges/cont_sim_scheme.pdf Graphic file (type pdf)
 
 <use Imatges/cont_sim_scheme.pdf>
@@ -786,7 +783,7 @@ rted-to.pdf Imatges/cont_sim.eps>
 (epstopdf)             \includegraphics on input line 264.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/cont_sim-eps-converted-to.pdf, id=235, 979.66pt x 518.93875pt>
+<Imatges/cont_sim-eps-converted-to.pdf, id=247, 979.66pt x 518.93875pt>
 File: Imatges/cont_sim-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/cont_sim-eps-converted-to.pdf>
@@ -804,7 +801,7 @@ File: Imatges/etseib.png Graphic file (type png)
 Package pdftex.def Info: Imatges/etseib.png used on input line 287.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [15 <./Imatges/cont_sim-eps-converted-to.pdf>]
-<Imatges/dis_sim_scheme.pdf, id=275, 707.5233pt x 164.2938pt>
+<Imatges/dis_sim_scheme.pdf, id=287, 707.5233pt x 164.2938pt>
 File: Imatges/dis_sim_scheme.pdf Graphic file (type pdf)
 
 <use Imatges/dis_sim_scheme.pdf>
@@ -821,7 +818,7 @@ ted-to.pdf Imatges/dis_sim.eps>
 (epstopdf)             \includegraphics on input line 308.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/dis_sim-eps-converted-to.pdf, id=276, 979.66pt x 518.93875pt>
+<Imatges/dis_sim-eps-converted-to.pdf, id=288, 979.66pt x 518.93875pt>
 File: Imatges/dis_sim-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/dis_sim-eps-converted-to.pdf>
@@ -850,7 +847,7 @@ ted-to.pdf Imatges/dis_all.eps>
 (epstopdf)             \includegraphics on input line 351.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/dis_all-eps-converted-to.pdf, id=309, 979.66pt x 518.93875pt>
+<Imatges/dis_all-eps-converted-to.pdf, id=321, 979.66pt x 518.93875pt>
 File: Imatges/dis_all-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/dis_all-eps-converted-to.pdf>
@@ -866,7 +863,7 @@ File: Imatges/etseib.png Graphic file (type png)
 Package pdftex.def Info: Imatges/etseib.png used on input line 370.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [18 <./Imatges/dis_all-eps-converted-to.pdf>]
-<Imatges/obs_sim_scheme.pdf, id=332, 752.57161pt x 366.89069pt>
+<Imatges/obs_sim_scheme.pdf, id=344, 752.57161pt x 366.89069pt>
 File: Imatges/obs_sim_scheme.pdf Graphic file (type pdf)
 
 <use Imatges/obs_sim_scheme.pdf>
@@ -883,7 +880,7 @@ nverted-to.pdf Imatges/obs_all_sim.eps>
 (epstopdf)             \includegraphics on input line 397.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/obs_all_sim-eps-converted-to.pdf, id=334, 979.66pt x 518.93875pt>
+<Imatges/obs_all_sim-eps-converted-to.pdf, id=346, 979.66pt x 518.93875pt>
 File: Imatges/obs_all_sim-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/obs_all_sim-eps-converted-to.pdf>
@@ -910,7 +907,7 @@ ted-to.pdf Imatges/obs_all.eps>
 (epstopdf)             \includegraphics on input line 415.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/obs_all-eps-converted-to.pdf, id=346, 979.66pt x 518.93875pt>
+<Imatges/obs_all-eps-converted-to.pdf, id=358, 979.66pt x 518.93875pt>
 File: Imatges/obs_all-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/obs_all-eps-converted-to.pdf>
@@ -931,7 +928,7 @@ Package epstopdf Info: Source file: <Imatges/obs_offset.eps>
 verted-to.pdf Imatges/obs_offset.eps>
 (epstopdf)             \includegraphics on input line 421.
 Package epstopdf Info: Output file is already uptodate.
-<Imatges/obs_offset-eps-converted-to.pdf, id=347, 979.66pt x 518.93875pt>
+<Imatges/obs_offset-eps-converted-to.pdf, id=359, 979.66pt x 518.93875pt>
 File: Imatges/obs_offset-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imatges/obs_offset-eps-converted-to.pdf>
@@ -954,7 +951,7 @@ Package pdftex.def Info: Imatges/etseib.png used on input line 441.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [21 <./Imatges/obs_all-eps-converted-to.pdf> <./Imatges/obs_offset-eps-convert
 ed-to.pdf>]
-<Imatges/pert_sim.pdf, id=404, 759.31679pt x 451.92839pt>
+<Imatges/pert_sim.pdf, id=416, 759.31679pt x 451.92839pt>
 File: Imatges/pert_sim.pdf Graphic file (type pdf)
 
 <use Imatges/pert_sim.pdf>
@@ -987,7 +984,7 @@ s>
 (epstopdf)             \includegraphics on input line 583.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/pert_ct_all_sim_pols_imag_no_sin-eps-converted-to.pdf, id=446, 979.66p
+<Imatges/pert_ct_all_sim_pols_imag_no_sin-eps-converted-to.pdf, id=457, 979.66p
 t x 518.93875pt>
 File: Imatges/pert_ct_all_sim_pols_imag_no_sin-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1009,7 +1006,7 @@ ls_imag_sin-eps-converted-to.pdf Imatges/pert_ct_all_sim_pols_imag_sin.eps>
 (epstopdf)             \includegraphics on input line 591.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/pert_ct_all_sim_pols_imag_sin-eps-converted-to.pdf, id=449, 979.66pt x
+<Imatges/pert_ct_all_sim_pols_imag_sin-eps-converted-to.pdf, id=460, 979.66pt x
  518.93875pt>
 File: Imatges/pert_ct_all_sim_pols_imag_sin-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1036,7 +1033,7 @@ mag-eps-converted-to.pdf Imatges/pert_ct_all_pols_imag.eps>
 (epstopdf)             \includegraphics on input line 601.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/pert_ct_all_pols_imag-eps-converted-to.pdf, id=486, 979.66pt x 518.938
+<Imatges/pert_ct_all_pols_imag-eps-converted-to.pdf, id=497, 979.66pt x 518.938
 75pt>
 File: Imatges/pert_ct_all_pols_imag-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1062,7 +1059,7 @@ n-eps-converted-to.pdf Imatges/power_spectral_mean.eps>
 (epstopdf)             \includegraphics on input line 615.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/power_spectral_mean-eps-converted-to.pdf, id=503, 1028.84375pt x 490.8
+<Imatges/power_spectral_mean-eps-converted-to.pdf, id=514, 1028.84375pt x 490.8
 3376pt>
 File: Imatges/power_spectral_mean-eps-converted-to.pdf Graphic file (type pdf)
  <use Imatges/power_spectral_mean-eps-converted-to.pdf>
@@ -1071,27 +1068,27 @@ on input line 615.
 (pdftex.def)             Requested size: 364.19667pt x 173.74915pt.
 Package epstopdf Info: Source file: <Imatges/power_spectral_nomean_bef_sin_pols
 _imag.eps>
-(epstopdf)                    date: 2015-11-19 11:16:57
-(epstopdf)                    size: 294124 bytes
+(epstopdf)                    date: 2015-11-20 13:08:35
+(epstopdf)                    size: 282849 bytes
 (epstopdf)             Output file: <Imatges/power_spectral_nomean_bef_sin_pols
 _imag-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-11-19 11:23:48
-(epstopdf)                    size: 18847 bytes
+(epstopdf)                    date: 2015-11-20 13:22:47
+(epstopdf)                    size: 26853 bytes
 (epstopdf)             Command: <repstopdf --outfile=Imatges/power_spectral_nom
 ean_bef_sin_pols_imag-eps-converted-to.pdf Imatges/power_spectral_nomean_bef_si
 n_pols_imag.eps>
 (epstopdf)             \includegraphics on input line 621.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imatges/power_spectral_nomean_bef_sin_pols_imag-eps-converted-to.pdf, id=504, 
-1028.84375pt x 490.83376pt>
+<Imatges/power_spectral_nomean_bef_sin_pols_imag-eps-converted-to.pdf, id=515, 
+979.66pt x 518.93875pt>
 File: Imatges/power_spectral_nomean_bef_sin_pols_imag-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use Imatges/power_spectral_nomean_bef_sin_pols_imag-eps-converted-to.pdf>
 Package pdftex.def Info: Imatges/power_spectral_nomean_bef_sin_pols_imag-eps-co
 nverted-to.pdf used on input line 621.
-(pdftex.def)             Requested size: 364.19667pt x 173.74915pt.
+(pdftex.def)             Requested size: 364.19667pt x 192.91493pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1102,54 +1099,152 @@ Package pdftex.def Info: Imatges/etseib.png used on input line 627.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [26 <./Imatges/power_spectral_mean-eps-converted-to.pdf> <./Imatges/power_spec
 tral_nomean_bef_sin_pols_imag-eps-converted-to.pdf>]
-File: Imatges/etseib.png Graphic file (type png)
+Package epstopdf Info: Source file: <Imatges/pert_sin_ct_sim_pols_imag_no_sorol
+l.eps>
+(epstopdf)                    date: 2015-11-11 12:41:32
+(epstopdf)                    size: 950936 bytes
+(epstopdf)             Output file: <Imatges/pert_sin_ct_sim_pols_imag_no_sorol
+l-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 12:00:42
+(epstopdf)                    size: 79011 bytes
+(epstopdf)             Command: <repstopdf --outfile=Imatges/pert_sin_ct_sim_po
+ls_imag_no_soroll-eps-converted-to.pdf Imatges/pert_sin_ct_sim_pols_imag_no_sor
+oll.eps>
+(epstopdf)             \includegraphics on input line 712.
+Package epstopdf Info: Output file is already uptodate.
 
+<Imatges/pert_sin_ct_sim_pols_imag_no_soroll-eps-converted-to.pdf, id=565, 979.
+66pt x 518.93875pt>
+File: Imatges/pert_sin_ct_sim_pols_imag_no_soroll-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use Imatges/pert_sin_ct_sim_pols_imag_no_soroll-eps-converted-to.pdf>
+Package pdftex.def Info: Imatges/pert_sin_ct_sim_pols_imag_no_soroll-eps-conver
+ted-to.pdf used on input line 712.
+(pdftex.def)             Requested size: 364.19667pt x 192.91493pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 705.
+Package pdftex.def Info: Imatges/etseib.png used on input line 717.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
  [27]
+Package epstopdf Info: Source file: <Imatges/pert_sin_ct_sim_pols_imag_soroll.e
+ps>
+(epstopdf)                    date: 2015-11-11 12:41:05
+(epstopdf)                    size: 973949 bytes
+(epstopdf)             Output file: <Imatges/pert_sin_ct_sim_pols_imag_soroll-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 12:00:43
+(epstopdf)                    size: 102853 bytes
+(epstopdf)             Command: <repstopdf --outfile=Imatges/pert_sin_ct_sim_po
+ls_imag_soroll-eps-converted-to.pdf Imatges/pert_sin_ct_sim_pols_imag_soroll.ep
+s>
+(epstopdf)             \includegraphics on input line 720.
+Package epstopdf Info: Output file is already uptodate.
+
+<Imatges/pert_sin_ct_sim_pols_imag_soroll-eps-converted-to.pdf, id=576, 979.66p
+t x 518.93875pt>
+File: Imatges/pert_sin_ct_sim_pols_imag_soroll-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use Imatges/pert_sin_ct_sim_pols_imag_soroll-eps-converted-to.pdf>
+Package pdftex.def Info: Imatges/pert_sin_ct_sim_pols_imag_soroll-eps-converted
+-to.pdf used on input line 720.
+(pdftex.def)             Requested size: 364.19667pt x 192.91493pt.
+
+Underfull \vbox (badness 1092) has occurred while \output is active []
+
 File: Imatges/etseib.png Graphic file (type png)
- <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 707.
+
+<use Imatges/etseib.png>
+Package pdftex.def Info: Imatges/etseib.png used on input line 728.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [28
+ [28 <./Imatges/pert_sin_ct_sim_pols_imag_no_soroll-eps-converted-to.pdf> <./Im
+atges/pert_sin_ct_sim_pols_imag_soroll-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Imatges/pert_sin_ct_pols_imag.eps>
+(epstopdf)                    date: 2015-11-19 15:34:44
+(epstopdf)                    size: 234991 bytes
+(epstopdf)             Output file: <Imatges/pert_sin_ct_pols_imag-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2015-11-20 13:22:49
+(epstopdf)                    size: 20645 bytes
+(epstopdf)             Command: <repstopdf --outfile=Imatges/pert_sin_ct_pols_i
+mag-eps-converted-to.pdf Imatges/pert_sin_ct_pols_imag.eps>
+(epstopdf)             \includegraphics on input line 731.
+Package epstopdf Info: Output file is already uptodate.
 
+<Imatges/pert_sin_ct_pols_imag-eps-converted-to.pdf, id=602, 979.66pt x 518.938
+75pt>
+File: Imatges/pert_sin_ct_pols_imag-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use Imatges/pert_sin_ct_pols_imag-eps-converted-to.pdf>
+Package pdftex.def Info: Imatges/pert_sin_ct_pols_imag-eps-converted-to.pdf use
+d on input line 731.
+(pdftex.def)             Requested size: 364.19667pt x 192.91493pt.
+Package epstopdf Info: Source file: <Imatges/power_spectral_nomean_pert_sin_pol
+s_imag.eps>
+(epstopdf)                    date: 2015-11-19 15:33:53
+(epstopdf)                    size: 283727 bytes
+(epstopdf)             Output file: <Imatges/power_spectral_nomean_pert_sin_pol
+s_imag-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 13:22:51
+(epstopdf)                    size: 27299 bytes
+(epstopdf)             Command: <repstopdf --outfile=Imatges/power_spectral_nom
+ean_pert_sin_pols_imag-eps-converted-to.pdf Imatges/power_spectral_nomean_pert_
+sin_pols_imag.eps>
+(epstopdf)             \includegraphics on input line 737.
+Package epstopdf Info: Output file is already uptodate.
 
-] [29] [30]
-Ap\`endix A.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 711.
+<Imatges/power_spectral_nomean_pert_sin_pols_imag-eps-converted-to.pdf, id=603,
+ 979.66pt x 518.93875pt>
+File: Imatges/power_spectral_nomean_pert_sin_pols_imag-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use Imatges/power_spectral_nomean_pert_sin_pols_imag-eps-converted-to.pdf>
+Package pdftex.def Info: Imatges/power_spectral_nomean_pert_sin_pols_imag-eps-c
+onverted-to.pdf used on input line 737.
+(pdftex.def)             Requested size: 364.19667pt x 192.91493pt.
+File: Imatges/etseib.png Graphic file (type png)
+
+<use Imatges/etseib.png>
+Package pdftex.def Info: Imatges/etseib.png used on input line 756.
+(pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
+ [29 <./Imatges/pert_sin_ct_pols_imag-eps-converted-to.pdf> <./Imatges/power_sp
+ectral_nomean_pert_sin_pols_imag-eps-converted-to.pdf>]
 File: Imatges/etseib.png Graphic file (type png)
 <use Imatges/etseib.png>
-Package pdftex.def Info: Imatges/etseib.png used on input line 711.
+Package pdftex.def Info: Imatges/etseib.png used on input line 756.
 (pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
- [31
+ [30] [31
+
+
+] [32]
+Ap\`endix A.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 762.
+File: Imatges/etseib.png Graphic file (type png)
+<use Imatges/etseib.png>
+Package pdftex.def Info: Imatges/etseib.png used on input line 762.
+(pdftex.def)             Requested size: 32.52141pt x 42.51874pt.
+ [33
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 711.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 762.
  (./1r_Informe-Lluis_Salord_Quetglas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 711.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 711.
-
-
-Package rerunfilecheck Warning: File `1r_Informe-Lluis_Salord_Quetglas.out' has
- changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `1r_Informe-Lluis_Salord_Quetglas.ou
-t':
-(rerunfilecheck)             Before: 28836BCEFCF0E5980B89A53EEBE075A5;1163
-(rerunfilecheck)             After:  DB78DFEFCD7E0C5321CA7AA55FAF5064;1147.
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 711.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 762.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 762.
+Package rerunfilecheck Info: File `1r_Informe-Lluis_Salord_Quetglas.out' has no
+t changed.
+(rerunfilecheck)             Checksum: 702D99828E529B40C7A574AB974EA9A8;1147.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 762.
  ) 
 Here is how much of TeX's memory you used:
- 8861 strings out of 493304
- 130438 string characters out of 6139871
- 233781 words of memory out of 5000000
- 12064 multiletter control sequences out of 15000+600000
+ 8895 strings out of 493304
+ 131936 string characters out of 6139871
+ 237497 words of memory out of 5000000
+ 12086 multiletter control sequences out of 15000+600000
  21733 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  36i,15n,43p,1040b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1178,11 +1273,11 @@ r/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/t
 ype1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on 1r_Informe-Lluis_Salord_Quetglas.pdf (33 pages, 1111304 bytes
+Output written on 1r_Informe-Lluis_Salord_Quetglas.pdf (35 pages, 1343493 bytes
 ).
 PDF statistics:
- 677 PDF objects out of 1000 (max. 8388607)
- 556 compressed objects within 6 object streams
- 100 named destinations out of 1000 (max. 500000)
- 214 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 771 PDF objects out of 1000 (max. 8388607)
+ 626 compressed objects within 7 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 234 words of extra memory for PDF output out of 10000 (max. 10000000)
 

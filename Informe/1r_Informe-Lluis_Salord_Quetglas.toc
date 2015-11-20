@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {2.4}Control amb ref\IeC {\'u}s de pertorbaci\IeC {\'o}}{21}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Pertorbaci\IeC {\'o} constant}{23}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Pertorbaci\IeC {\'o} constant i sinuso\IeC {\@umlaut \i }dal}{25}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Pertorbacions d'un rang de freq\IeC {\@umlaut u}\IeC {\`e}ncies sinuso\IeC {\@umlaut \i }dals}{27}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}\IeC {\'U}s de pols reals de l'observador}{27}{section.2.5}
-\contentsline {chapter}{Annexos}{28}{section*.22}
-\contentsline {chapter}{\numberline {A}C\IeC {\`a}lculs per ref\IeC {\'u}s de pertorbacions d'un rang de freq\IeC {\@umlaut u}\IeC {\`e}ncies sinuso\IeC {\@umlaut \i }dals}{31}{appendix.A}
+\contentsline {subsection}{\numberline {2.4.3}Pertorbacions d'un rang de freq\IeC {\@umlaut u}\IeC {\`e}ncies sinuso\IeC {\@umlaut \i }dals}{30}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}\IeC {\'U}s de pols reals de l'observador}{30}{section.2.5}
+\contentsline {chapter}{Annexos}{31}{section*.26}
+\contentsline {chapter}{\numberline {A}C\IeC {\`a}lculs per ref\IeC {\'u}s de pertorbacions d'un rang de freq\IeC {\@umlaut u}\IeC {\`e}ncies sinuso\IeC {\@umlaut \i }dals}{33}{appendix.A}

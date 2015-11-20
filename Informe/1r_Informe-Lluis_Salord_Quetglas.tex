@@ -623,7 +623,7 @@ A l'hora de determinar quina freqüència s'havia de refusar en primera instànc
 \end{figure}
 
 \vspace{100pt}
-Un cop escollida la freqüència a refusar, s'han de plantejar les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ que modelen la pertorbació constant i sinusoïdal. El cas de la constant, s'ha definit el seu model en \eqref{eq:pert_const}. Per altra banda, el d'una sinusoïdal en continu és \eqref{eq:pert_sin_cont}, depenent de la freqüència $w_0$ expressada en radians per segon. Tot i que, per a ser utilitzat s'ha de passar a discret amb $\Phi_{w_2}=e^{F_{w_2} T_s}$ sent el període de mostratge $T_s=0.05$ s.\footnote{Al llarg de l'informe es fa referència a les matrius corresponents a les pertorbacions constants amb el subíndex $w_1$ i a les de les pertorbacions sinusoïdals amb subíndex $w_2$.}
+Un cop escollida la freqüència a refusar, s'han de plantejar les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ que modelen la pertorbació constant i sinusoïdal. El cas de la constant, s'ha definit el seu model en \eqref{eq:pert_const}. Per altra banda, el d'una sinusoïdal, en continu, és \eqref{eq:pert_sin_cont}, depenent de la freqüència $w_0$ expressada en radians per segon. Cal a dir, que la freqüència que s'ha escollit de $2.4$ és en unitats de Hz, per tant $w_0=2.4\cdot2\pi = 15.07964~\mathrm{\frac{rad}{s}}$. Ara bé, per a ser utilitzat, s'ha de passar a discret amb l'ús de $\Phi_{w_2}=e^{F_{w_2} T_s}$, sent el període de mostratge $T_s=0.05$ s.\footnote{Al llarg de l'informe es fa referència a les matrius corresponents a les pertorbacions constants amb el subíndex $w_1$ i a les de les pertorbacions sinusoïdals amb subíndex $w_2$.}
 
 \begin{equation}\label{eq:pert_sin_cont}
 \begin{bmatrix}
@@ -641,10 +641,10 @@ w\\
 \end{bmatrix}
 \end{equation}
 
-Per tant, si s'acoblen les diferents matrius de les pertorbacions constants i sinusoïdals, dona com a resultat el model del sistema expressat en les equacions \eqref{eq:pert_const_model_mat}. En el moment que es tenen les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ ja es pot utilitzar la formula d'Ackermann per calcular $L$ i les equacions \eqref{eq:pert_model_glob} per definir l'observador.
+Per tant, si s'acoblen les diferents matrius de les pertorbacions constants i sinusoïdals, dona com a resultat el model del sistema expressat en les equacions \eqref{eq:pert_sin_ct_model_mat}. En el moment que es tenen les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ ja es pot utilitzar la formula d'Ackermann per calcular $L$, amb resultat expressat en \eqref{eq:pert_sin_ct_L}, i les equacions \eqref{eq:pert_model_glob} per definir l'observador.
 
 
-\begin{equation}\label{eq:pert_const_model_mat}
+\begin{equation}\label{eq:pert_sin_ct_model_mat}
 \left\{
 \begin{array}{lr}
 \begin{bmatrix}
@@ -683,12 +683,63 @@ w_k^{d_2}\\
 \Phi_{w_2}=\begin{bmatrix}
 a_{11} & a_{12}\\
 a_{21} & a_{22}
+\end{bmatrix} = \begin{bmatrix}
+0,72897 & 0,045395\\
+-10,3227 & 0,72897
 \end{bmatrix}
 
 \end{array}
 \right.
 \end{equation}
 
+\begin{equation}\label{eq:pert_sin_ct_L}
+L=\begin{bmatrix}
+2,10252\\
+-1,08740\\
+0,03339\\
+-0,08400\\
+-4,93555
+\end{bmatrix}
+\end{equation}
+
+
+A l'hora de simular amb \texttt{Simulink} prenem el model \eqref{fig:pert_sim}, amb els nous valors de $\Phi_w$, $\Gamma_w$, $C_w$ i $L$ i fent les petites adaptacions de la realimentació d'estat observat i del \textit{feedforward} s'aconsegueix dur a terme la simulació.
+
+La primera simulació que es prova és amb les pertorbacions constants (\textit{step}) i sinusoïdals. D'aquesta forma es comprova si refusa aquestes pertorbacions com es veu en la figura \ref{fig:pert_sin_ct_sim_pols_imag_no_soroll}. Per tant la funció principal d'aquest control es compleix de forma satisfactòria.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/pert_sin_ct_sim_pols_imag_no_soroll.eps}
+\caption{Dades de la simulació amb control amb refús de pertorbacions constants i sinusoïdals amb un \textit{step} i una sinusoïdal\label{fig:pert_sin_ct_sim_pols_imag_no_soroll}}
+\end{figure}
+
+Posteriorment, es prova afegint una pertorbació de soroll blanc, que intenta representar part del soroll real de la planta o els sensors. En aquest cas, representat en la figura \ref{fig:pert_sin_ct_sim_pols_imag_soroll}, el control no es capaç d'eliminar el soroll, ja que aquest no és ni un \textit{offset}, ni tampoc és una sinusoïdal de la freqüència refusada, per aconseguir-ho es requeriria d'un altre tipus de control, com podria ser el de refús de pertorbacions d'un rang de sinusoïdals.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/pert_sin_ct_sim_pols_imag_soroll.eps}
+\caption{Dades de la simulació amb control amb refús de pertorbacions constants i sinusoïdals amb un \textit{step}, una sinusoïdal i soroll blanc\label{fig:pert_sin_ct_sim_pols_imag_soroll}}
+\end{figure}
+
+Un cop s'ha comprovat en la simulació que el control funciona de la forma desitjada, es pot procedir a la implementació en l'Arduino. En aquest cas en diferència al control de pertorbacions constants, només es diferencia en les matrius utilitzades i que en el \textit{feedforward} s'ha d'afegir el terme $w_k^{d_2}$, que correspon a l'estimació de la sinusoïdal. 
+
+\vspace{16pt}
+El resultat de la implementació és el de la figura \ref{fig:pert_sin_ct_pols_imag}, es veu com hi ha encara soroll, però el de freqüència $2.4$ Hz ha desaparegut. Aquest fet es pot comprovar millor observant el gràfic de la densitat espectral de potència, de la figura \ref{fig:power_spectral_nomean_pert_sin_pols_imag}. Ara bé, es cert que en $2.4$ Hz pràcticament no hi ha senyal, però s'ha intensificat en altres freqüències quedant en més o menys la mateixa potència. Per tant, es podria dir que aquest tipus de refús, per eliminar soroll general\footnote{Amb soroll general es refereix a que el soroll que es vol refusar no es degut a una causa concreta, i que per tant, no només treballa en una freqüència determinada.} provoca la distribució de la potència del soroll en altres freqüències.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/pert_sin_ct_pols_imag.eps}
+\caption{Dades de l'Arduino amb control amb refús de pertorbacions constants i sinusoïdals\label{fig:pert_sin_ct_pols_imag}}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/power_spectral_nomean_pert_sin_pols_imag.eps}
+\caption{Densitat espectral de la senyal $V_1$, sense els transitoris i menys la mitja en cada tram, del control amb refús de pertorbacions constants i sinusoïdals\label{fig:power_spectral_nomean_pert_sin_pols_imag}}
+\end{figure}
+
+
+%Dir que amb el fet de posar refusar a una certa frequencia la potencia es distribueix en altres frequencies
 \subsection{Pertorbacions d'un rang de freqüències sinusoïdals}
 \label{sec:pert_rang_sin}
 

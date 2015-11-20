@@ -12,7 +12,7 @@ h=5E-2;
 P_dis=[exp(P(1)*h), exp(P(2)*h)];
 K_dis=acker(phi,gam,P_dis);
 
-w=0.5371*2*pi();
+w=0.7715*2*pi();
 phi_sin=c2d([0 1;-w*w 0],[1 0]',h);
 phi_pert=[phi gam gam [0;0]; zeros(3,2) [1;0;0] [[0 0]; phi_sin]];
 gam_pert=[gam; 0; 0; 0];
