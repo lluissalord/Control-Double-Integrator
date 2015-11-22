@@ -13,12 +13,17 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Detall de l'\textit {offset} del control amb observador\relax }}{21}{figure.caption.15}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Model de simulaci\IeC {\'o} del sistema amb control am ref\IeC {\'u}s de pertorbacions\relax }}{23}{figure.caption.16}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Dades de la simulaci\IeC {\'o} amb control amb ref\IeC {\'u}s de pertorbacions constants amb un \textit {step}\relax }}{24}{figure.caption.17}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Dades de la simulaci\IeC {\'o} amb control amb ref\IeC {\'u}s de pertorbacions constants amb un \textit {step} i una sinuso\IeC {\@umlaut \i }dal\relax }}{24}{figure.caption.18}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Dades de la simulaci\IeC {\'o} amb control amb ref\IeC {\'u}s de pertorbacions constants amb un \textit {step} i una sinuso\IeC {\@umlaut \i }dal\relax }}{25}{figure.caption.18}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces Dades de l'Arduino amb control amb ref\IeC {\'u}s de pertorbacions constants\relax }}{25}{figure.caption.19}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Densitat espectral de la senyal $V_1$, amb una refer\IeC {\`e}ncia constant\relax }}{26}{figure.caption.20}
 \contentsline {figure}{\numberline {2.15}{\ignorespaces Densitat espectral de la senyal $V_1$ menys la mitja, amb una refer\IeC {\`e}ncia constant\relax }}{26}{figure.caption.21}
 \contentsline {figure}{\numberline {2.16}{\ignorespaces Dades de la simulaci\IeC {\'o} amb control amb ref\IeC {\'u}s de pertorbacions constants i sinuso\IeC {\@umlaut \i }dals amb un \textit {step} i una sinuso\IeC {\@umlaut \i }dal\relax }}{28}{figure.caption.22}
 \contentsline {figure}{\numberline {2.17}{\ignorespaces Dades de la simulaci\IeC {\'o} amb control amb ref\IeC {\'u}s de pertorbacions constants i sinuso\IeC {\@umlaut \i }dals amb un \textit {step}, una sinuso\IeC {\@umlaut \i }dal i soroll blanc\relax }}{28}{figure.caption.23}
 \contentsline {figure}{\numberline {2.18}{\ignorespaces Dades de l'Arduino amb control amb ref\IeC {\'u}s de pertorbacions constants i sinuso\IeC {\@umlaut \i }dals\relax }}{29}{figure.caption.24}
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Densitat espectral de la senyal $V_1$, sense els transitoris i menys la mitja en cada tram, del control amb ref\IeC {\'u}s de pertorbacions constants i sinuso\IeC {\@umlaut \i }dals\relax }}{29}{figure.caption.25}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Densitat espectral de la senyal $V_1$, sense els transitoris i menys la mitja en cada tram, del control amb ref\IeC {\'u}s de pertorbacions constants i sinuso\IeC {\@umlaut \i }dals\relax }}{30}{figure.caption.25}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Comparaci\IeC {\'o} de les dades de la simulaci\IeC {\'o} amb control amb ref\IeC {\'u}s de pertorbacions constants, entre l'\IeC {\'u}s de pols amb part imagin\IeC {\`a}ria o nom\IeC {\'e}s amb part real\relax }}{33}{figure.caption.26}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Comparaci\IeC {\'o} de les dades de l'Arduino amb control amb ref\IeC {\'u}s de pertorbacions constants, entre l'\IeC {\'u}s de pols amb part imagin\IeC {\`a}ria o nom\IeC {\'e}s amb part real\relax }}{34}{figure.caption.27}
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Densitat espectral de la senyal $V_1$ menys la mitja, amb una refer\IeC {\`e}ncia constant, pel cas de pols reals\relax }}{35}{figure.caption.28}
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Comparaci\IeC {\'o} de les dades de l'Arduino amb control amb ref\IeC {\'u}s de pertorbacions constants i sinuso\IeC {\@umlaut \i }dals, entre l'\IeC {\'u}s de pols amb part imagin\IeC {\`a}ria o nom\IeC {\'e}s amb part real\relax }}{36}{figure.caption.29}
+\addvspace {10\p@ }
 \addvspace {10\p@ }

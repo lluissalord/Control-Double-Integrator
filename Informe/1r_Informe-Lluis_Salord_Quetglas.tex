@@ -44,6 +44,7 @@
 \renewcommand{\thefootnote}{\arabic{footnote}}
 
 \usepackage{etoolbox}
+\usepackage{subcaption}
 \patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 
 \headheight = 15pt %Donava un warning sino
@@ -68,7 +69,7 @@
 \begin{abstract}
 \addcontentsline{toc}{chapter}{Resum}
 
-Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova. Text de prova.
+En l'informe present s'expliquen els procediments que s'han fet per tal dur a terme un control precís d'una planta pròpiament inestable, com és un doble integrador. Per cadascun dels controls plantejats al llarg de l'informe, primer s'ha duit a terme una simulació amb l'eina \texttt{Simulink} i després s'ha implementat el control en l'Arduino, que és el controlador de la planta. En l'informe es presenten diferents controls, com és el continu i discret per realimentació d'estat, l'ús d'un observador complert, on posteriorment se l'hi afegeix un control de refús de pertorbacions constants i sinusoïdals. Finalment, es planteja l'ús d'un control de refús de pertorbacions d'un rang de freqüències de sinusoïdals.
 
 \end{abstract}
 
@@ -267,6 +268,7 @@ Al tenir tots els valors es procedeix a dur a terme les simulacions. Les dades p
 
 D'aquest cas no se'n fa un anàlisi en profunditat ja que no té especialment sentit físic. Només destacar, com es veu en la figura \ref{fig:cont_sim}, el fet que es demostra que una planta inestable, amb el controlador adequat por permetre l'estabilització del sistema.
 
+
 \section{Control discret}
 
 Com s'ha explicat en el cas del control continu, aquest no reflecteix la realitat, ja que el controlador (l'Arduino) funciona de forma discreta. Aquest llegeix les dades i fa els càlculs un cop cada cert temps, i envia el mateix valor del senyal durant aquest període.
@@ -423,6 +425,7 @@ Un cop s'ha implementat el codi, s'estudien les sortides per tal de veure si el 
 \end{figure}
 
 \section{Control amb refús de pertorbació}
+\label{sec:pert}
 
 El control amb refús de pertorbacions d'un determinat tipus de soroll també es pot entendre com un control per seguir una referència d'aquest mateix tipus. Realment, el que s'aconsegueix amb aquest tipus de control és que si l'error que s'està donant és de la forma que es pretén refusar o seguir, doncs s'aconseguix de forma perfecta. Per això, és pretén estimar la pertorbació $w$ i aquesta compensar-la amb l'estimació $\bar{w}$, on s'intenta aconseguir $\bar{w}=w$.
 
@@ -531,7 +534,7 @@ En aquest informe es pretén dur a terme el control amb refús de pertorbacions 
 
 \subsection{Pertorbació constant}
 
-En el cas de les pertorbacions constants, el model que les defineix és \eqref{eq:pert_const}. Per tant, el model de l'observador queda com \eqref{eq:pert_const_model_mat}. Posteriorment, s'aplica la formula d'Ackermann resultant $L=\begin{bmatrix}
+En el cas de les pertorbacions constants, el model que les defineix és \eqref{eq:pert_const}. Per tant, el model de l'observador queda com \eqref{eq:pert_const_model_mat}. Ara bé, en el cas de únicament l'observador es tenien els pols $-10\pm20i$, però al afegir el control de pertorbació constant i afegir una variable d'estat, s'ha d'escollir també un altra pol de llaç tancat. El pol s'ha escollit lent, ja que al ser un \textit{offset} que es manté sempre igual, interesa que no augmentar la rapidesa de la resposta, per això s'ha escollit un pol igual a $0.9$, en el pla Z.  Posteriorment, s'aplica la formula d'Ackermann resultant amb $L=\begin{bmatrix}
 0.71467\\
 -0.12109\\
 0.00614
@@ -641,7 +644,9 @@ w\\
 \end{bmatrix}
 \end{equation}
 
-Per tant, si s'acoblen les diferents matrius de les pertorbacions constants i sinusoïdals, dona com a resultat el model del sistema expressat en les equacions \eqref{eq:pert_sin_ct_model_mat}. En el moment que es tenen les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ ja es pot utilitzar la formula d'Ackermann per calcular $L$, amb resultat expressat en \eqref{eq:pert_sin_ct_L}, i les equacions \eqref{eq:pert_model_glob} per definir l'observador.
+Per tant, si s'acoblen les diferents matrius de les pertorbacions constants i sinusoïdals, dona com a resultat el model del sistema expressat en les equacions \eqref{eq:pert_sin_ct_model_mat}. Per altra banda, per l'elecció dels pols de llaç tancat s'han deixat els de l'observador inicial $-10\pm20i$ i s'han afegit un pol lent de valor $0.9$ i dos de valor $0.4$, en pla Z. El dos pols de valor $0.4$ s'han seleccionat després de fer varies proves i veure que si es posen molt ràpids o molt lents el sistema és inestable, si són molt ràpids perquè segueixen el soroll.
+
+En el moment que es tenen les matrius $\Phi_w$, $\Gamma_w$ i $C_w$ i escollits els pols de llaç tancat, ja es pot utilitzar la formula d'Ackermann per calcular $L$, amb resultat expressat en \eqref{eq:pert_sin_ct_L}, i les equacions \eqref{eq:pert_model_glob} per definir l'observador.
 
 
 \begin{equation}\label{eq:pert_sin_ct_model_mat}
@@ -723,8 +728,7 @@ Posteriorment, es prova afegint una pertorbació de soroll blanc, que intenta re
 
 Un cop s'ha comprovat en la simulació que el control funciona de la forma desitjada, es pot procedir a la implementació en l'Arduino. En aquest cas en diferència al control de pertorbacions constants, només es diferencia en les matrius utilitzades i que en el \textit{feedforward} s'ha d'afegir el terme $w_k^{d_2}$, que correspon a l'estimació de la sinusoïdal. 
 
-\vspace{16pt}
-El resultat de la implementació és el de la figura \ref{fig:pert_sin_ct_pols_imag}, es veu com hi ha encara soroll, però el de freqüència $2.4$ Hz ha desaparegut. Aquest fet es pot comprovar millor observant el gràfic de la densitat espectral de potència, de la figura \ref{fig:power_spectral_nomean_pert_sin_pols_imag}. Ara bé, es cert que en $2.4$ Hz pràcticament no hi ha senyal, però s'ha intensificat en altres freqüències quedant en més o menys la mateixa potència. Per tant, es podria dir que aquest tipus de refús, per eliminar soroll general\footnote{Amb soroll general es refereix a que el soroll que es vol refusar no es degut a una causa concreta, i que per tant, no només treballa en una freqüència determinada.} provoca la distribució de la potència del soroll en altres freqüències.
+El resultat de la implementació és el de la figura \ref{fig:pert_sin_ct_pols_imag}, on es veu com hi ha encara soroll, però l'existent en la freqüència $2.4$ Hz ha desaparegut. Aquest fet es pot comprovar millor observant el gràfic de la densitat espectral de potència, de la figura \ref{fig:power_spectral_nomean_pert_sin_pols_imag}. Ara bé, es cert que en $2.4$ Hz pràcticament no hi ha senyal, però s'ha intensificat en altres freqüències quedant en més o menys la mateixa potència. Per tant, es podria dir que aquest tipus de refús, per eliminar soroll general\footnote{Amb soroll general es refereix a que el soroll que es vol refusar no es degut a una causa concreta, i que per tant, no només treballa en una freqüència determinada.}, provoca la distribució de la potència del soroll en altres freqüències.
 
 \begin{figure}[h]
 \centering
@@ -738,19 +742,139 @@ El resultat de la implementació és el de la figura \ref{fig:pert_sin_ct_pols_i
 \caption{Densitat espectral de la senyal $V_1$, sense els transitoris i menys la mitja en cada tram, del control amb refús de pertorbacions constants i sinusoïdals\label{fig:power_spectral_nomean_pert_sin_pols_imag}}
 \end{figure}
 
-
-%Dir que amb el fet de posar refusar a una certa frequencia la potencia es distribueix en altres frequencies
+\newpage
 \subsection{Pertorbacions d'un rang de freqüències sinusoïdals}
 \label{sec:pert_rang_sin}
 
+Aquest tipus de pertorbació es centra en la hipòtesi que es poden refusar o seguir el conjunt de sinusoïdals de freqüència dins un rang determinat. Al observar la densitat d'espectre de potència de la figura \ref{fig:power_spectral_nomean_bef_sin_pols_imag}, la del refús de pertorbacions constants, es pot dir que el soroll es troba dins el rang entre $0$ i $5$ Hz. Per tant, la senyal que es voldria refusar és el de l'equació \eqref{eq:pert_rang_integral}.
+
+\begin{equation}\label{eq:pert_rang_integral}
+\int_{0}^{5\cdot 2\pi} sin(wt) d w = \frac{1}{t}(1-cos(5\cdot 2\pi t)) = \frac{2 sin^2(5\cdot \pi t)}{t}
+\end{equation}
+
+Ara bé, aquest senyal es troba en el domini del temps, per tal de poder crear el refús de pertorbacions per aquest senyal s'ha de passar en el pla S, després en espai d'estats i finalment al pla Z. 
+
+Primer el que es planteja es fer la transformada de Laplace de l'equació \eqref{eq:pert_rang_integral}, d'on en surt \ref{eq:pert_rang_laplace} segons l'eina de càlcul \texttt{Wolfram}. Mencionar que els $log$ en aquest cas són logaritmes naturals.
+
+\begin{equation}\label{eq:pert_rang_laplace}
+\frac{1}{2}(log(s^2+100\pi^2)-2log(s)) \quad Im(s) \neq 0 ~ i ~ Re(s) > 0
+\end{equation}
+
+Al tenir la transformada de Laplace amb logaritmes, aquests no poden ser utilitzats pel control, per tant s'ha de fer per exemple la descomposició de Taylor per fer una aproximació d'aquesta expressió com la de l'equació \eqref{eq:pert_rang_taylor}.
+
+\begin{equation}\label{eq:pert_rang_taylor}
+log\left(100\cdot \pi^2\right)+2\left(\cdot \frac{s}{200\cdot \pi^2+s} +\frac{1}{3} \left(\frac{s}{200\cdot \pi^2+s}\right)^3\right)-4 \left(\frac{s-1}{s+1}+\frac{1}{3} \left(\frac{s-1}{s+1}\right)^3\right)
+\end{equation}
+
+Un cop s'ha fet la descomposició de Taylor, s'ha de reagrupar per poder ser processat per la funció \texttt{tf2ss} del \texttt{Matlab}. La reagrupació que en surt de l'eina \texttt{Wolfram} és la de l'equació \eqref{eq:pert_rang_agrup}, el càlculs de l'agrupació es troben en l'annex \ref{ann:pert_rang_agrup}.
+
+\begin{equation}\label{eq:pert_rang_agrup}
+\frac{c_6 s^6 + c_5 s^5 + c_4 s^4 + c_3 s^3 + c_2 s^2 + c_1 s + c_0}{(s+1)^3 (s+200\cdot \pi^2)^3}
+\end{equation}
+
+De l'equació anterior i l'ús de la funció \texttt{tf2ss} se'n treuen les matrius $A^d$, $B^d$, $C^d$ i $D^d$. El primer problema que s'ha trobat és tot i transformar les matrius $A^d$, $B^d$ en $\Phi^d$ i $\Gamma^d$, i introduir les matrius $C^d$ i $D^d$, el sistema no és estable.
+
+Altres coses que s'han provat ha estat fer la descomposició de Taylor primer de l'equació \eqref{eq:pert_rang_integral} que dona com a resultat l'equació \eqref{eq:pert_rang_taylor_2}. Després fer la trasnformada de Laplace que en resulta \eqref{eq:pert_rang_laplace_2} que al ser transformat per \texttt{tf2ss} i en discret seguia sent inestable.
+
+\begin{equation}\label{eq:pert_rang_taylor_2}
+50\pi^2 t - \frac{1250 \pi^4 t^3}{3} + \frac{12500 \pi^6 t^5}{9} + O(t^7)
+\end{equation}
+
+\begin{equation}\label{eq:pert_rang_laplace_2}
+\frac{50\pi^2 \left( 3 s^4 - 150 \pi^2 s^2 + 10000 \pi^4 \right)}{3s^6}
+\end{equation}
+
+Finalment, s'ha deixat estar l'intent de fer aquest tipus de control, tot i que es deixa plantejat com una futura continuació del treball. 
+
 \section{Ús de pols reals de l'observador}
-%S'ha vist que hi ha unes freqüencies molt altes i s'ha pensat en que poden ser degudes als pols de l'observador que s'han posat, per això es decideix a procedir amb l'ús de pols reals en lloc dels proposats a l'inici.
-%Després també es veu com el fet que siguin ràpids no es necessari ja que es preten refusar un senyal que es sempre igual. Es veu en la transformada de fourier.
+
+En els resultats finals plantejats s'ha vist que provoquen un soroll a molt alta freqüència. Una posibilitat que s'ha plantejat d'aquest soroll ha alta freqüència és el fet que sigui provocat pels pols inicials de l'observador. Aquests pols eren $-10\pm20i$, en el pla S, que s'han plantejat més ràpids que la planta al modificar la part real d'aquests, però amb la mateixa part imaginària. La hipòtesi que es planteja és que aquests pols, al tenir una part imaginària tant alta, que donen una resposta d'alta freqüència,  intentin seguir el soroll provocat pels sensors, entre d'altres, i que per tant, l'únic que s'aconsegueix és amplificar aquest soroll.
+
+El que es planteja actualment és eliminar aquesta part imaginària per tal de no posar altes freqüències a la resposta i comprovar si d'aquesta manera es té un millor resultat.
+
+En aquest cas, en lloc d'utilitzar els pols $-10\pm20i$, en pla S, es pretén utilitzar uns que no tinguin la part imaginària. La proposta que s'ha plantejat és la d'utilitzar els pols $-10$ i $-5$, en el pla S. D'aquesta manera es té una dinàmica un poc més ràpida que la planta, per tal de poder-la seguir, però sense ser molt ràpida, per tal de no seguir el soroll dels sensors, entre d'altres.
+
+A partir d'aquí es repetiran els passos fets en l'apartat de \texttt{Control amb refús de pertorbacions}, secció \ref{sec:pert}, però en lloc d'utilitzar els pols $-10\pm20i$, s'utilitzen els pols $-10$ i $-5$, en el pla S.
+
+\subsection{Pertorbacions constants}
+
+En el cas de les pertorbacions constants, s'ha escollit un pol lent de valor $0.9$, igual que en l'estudi anterior. En dur a terme la simulació amb pols de només amb part real, és veu com en l'únic àmbit que canvia respecte el cas amb pols amb part imaginària és el transitori, fins que arriba a seguir la planta. En aquest transitori, pel cas dels pols reals és més suau i sense tantes oscil·lacions, com es pot veure en la comparativa de la figura \ref{fig:pert_real_imag_ct_all_sim_no_sin}.
+
+\begin{figure}[h]
+\centering
+	\begin{subfigure}[r]{0.8\textwidth}
+		\includegraphics[width=\textwidth]{Imatges/pert_ct_all_sim_pols_imag_no_sin.eps}
+		\caption{Simulació amb pols amb part imaginària}
+	\end{subfigure}\\
+	\vspace{15pt}
+	\begin{subfigure}[r]{0.8\textwidth}
+		\includegraphics[width=\textwidth]{Imatges/pert_ct_all_sim_pols_real_no_sin.eps}
+		\caption{Simulació amb pols reals}
+	\end{subfigure}
+\caption{Comparació de les dades de la simulació amb control amb refús de pertorbacions constants, entre l'ús de pols amb part imaginària o només amb part real\label{fig:pert_real_imag_ct_all_sim_no_sin}}
+\end{figure}
+
+\newpage
+Ara bé, a l'hora de fer les comparatives en el propi Arduino, si que s'aprecia una diferència notable en el comportament. Si s'observa la comparativa de la figura \ref{fig:pert_real_imag_ct_all} és veu com al utilitzar els pols de només part real, el soroll en alta freqüència desapareix. Per tant, es treu com a conclusió que en realitat el soroll que es tenia inicialment en l'observador era degut a que els pols d'aquest seguien el soroll i l'amplificaven.
+
+
+\begin{figure}[h]
+\centering
+	\begin{subfigure}[r]{0.8\textwidth}
+		\includegraphics[width=\textwidth]{Imatges/pert_ct_all_pols_imag.eps}
+		\caption{Dades amb pols amb part imaginària}
+	\end{subfigure}\\
+	\vspace{15pt}
+	\begin{subfigure}[r]{0.8\textwidth}
+		\includegraphics[width=\textwidth]{Imatges/pert_ct_all_pols_real.eps}
+		\caption{Dades amb pols reals}
+	\end{subfigure}
+\caption{Comparació de les dades de l'Arduino amb control amb refús de pertorbacions constants, entre l'ús de pols amb part imaginària o només amb part real\label{fig:pert_real_imag_ct_all}}
+\end{figure}
+
+\subsection{Pertorbacions constants i sinusoïdals}
+
+Per fer ús del control de refús de pertorbacions sinusoïdals amb els pols reals, al haver canviat el comportament del conjunt, s'ha de tornar a fer l'estudi de la freqüència que s'ha d'eliminar. En aquest cas, el gràfic de la densitat espectral de potència de la senyal $V_1$ és el de la figura \ref{fig:power_spectral_nomean_pert_ct_pols_reals}. Per tant, la freqüència que es pretén eliminar és la de $0.7715$ Hz. En aquest cas s'han aplicat tres pols lents de valor $0.9$ a més dels de l'observador. D'aquesta forma no s'intenta seguir el soroll.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Imatges/power_spectral_nomean_pert_ct_pols_reals.eps}
+\caption{Densitat espectral de la senyal $V_1$ menys la mitja, amb una referència constant, pel cas de pols reals\label{fig:power_spectral_nomean_pert_ct_pols_reals}}
+\end{figure}
+
+El resultat de la implementació en l'Arduino es diferencia amb el de amb pols amb part imaginària pels següents punts, com es pot veure en la comparació de la figura \ref{fig:pert_real_imag_sin_ct}.
+\begin{itemize}
+\item Soroll de freqüència més baixa
+\item Transitori, fins a seguir la planta, més llarg
+\item Transitori, per canvi de valor de la planta, menys pronunciat
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+	\begin{subfigure}[r]{0.8\textwidth}
+		\includegraphics[width=\textwidth]{Imatges/pert_sin_ct_pols_imag.eps}
+		\caption{Dades amb pols amb part imaginària}
+	\end{subfigure}\\
+	\vspace{15pt}
+	\begin{subfigure}[r]{0.8\textwidth}
+		\includegraphics[width=\textwidth]{Imatges/pert_sin_ct_pols_real.eps}
+		\caption{Dades amb pols reals}
+	\end{subfigure}
+\caption{Comparació de les dades de l'Arduino amb control amb refús de pertorbacions constants i sinusoïdals, entre l'ús de pols amb part imaginària o només amb part real\label{fig:pert_real_imag_sin_ct}}
+\end{figure}
 
 %\bibliography{./Bibliografia/library}
 %\addcontentsline{toc}{chapter}{Referències}
 %\label{Referencies}
 
+\chapter{Conclusions}
+En definitiva el treball ha permès demostrar que es pot dur a terme el control d'una planta inestable, com és un doble integrador, amb un Arduino. Tot i utilitzar eines de control com és un observador o el refús de pertorbacions.
+
+Per altra banda, s'ha de tenir molta cura a l'hora d'escollir els pols de llaç tancats. Tant pel fet que no siguin massa ràpids per a seguir el soroll i provoquin una amplificació d'aquest, com per a que no siguin els propis pols que al tenir una part imaginària provoquin un cert soroll en freqüències pròximes a la del pol. Per tant, s'han d'escollir els pols adequats per la tasca que es requereix, si no es requereix de l'oscil·lació és més convenient utilitzar pols amb només part real.
+
+En l'apartat de refús de pertorbacions sinusoïdals s'ha demostrat que el fet d'intentar rebaixar un soroll general amb el refús de la sinusoïdal de freqüència amb més potència tan sols provoca la distribució del soroll a diferents freqüències.
+
+Per últim, com a possible continuació d'aquest treball podria ser amb la implementació del refús d'un rang de freqüències o d'un filtre de Kalman, per tal d'utilitzar uns pols de llaç tancat òptims. 
 
 \appendix
 \clearpage % o \cleardoublepage
@@ -758,5 +882,23 @@ El resultat de la implementació és el de la figura \ref{fig:pert_sin_ct_pols_i
 \appendixpage
 
 \chapter{Càlculs per refús de pertorbacions d'un rang de freqüències sinusoïdals}
+\section{Agrupació de la descomposició de Taylor de la transformada de Laplace}
+\label{ann:pert_rang_agrup}
+\begin{equation*}
+\frac{c_6 s^6 + c_5 s^5 + c_4 s^4 + c_3 s^3 + c_2 s^2 + c_1 s + c_0}{(s+1)^3 (s+200\cdot \pi^2)^3}
+\end{equation*}
+
+\begin{eqnarray*}
+&c_6=6\cdot log(2)+6\cdot log(5)+6\cdot log(\pi )-8\\
+&c_5=6\cdot (4+3\cdot log(2)+3\cdot log(5)+600\cdot \pi^2\cdot (-2+log(2)+log(5))+3\cdot (1+200\cdot \pi^2)\cdot log(\pi ))\\
+&c_4=6\cdot (4+3\cdot log(2)+3\cdot log(5)+40000\cdot \pi^4\cdot (1+600\cdot \pi^2+40000\cdot \pi^4)\cdot log(\pi ))\\
+&c_3=-2\cdot (-12-3\cdot log(2)+8\cdot 10^6\cdot \pi^6\cdot (8-3\cdot log(2)-3\cdot log(5))-3\cdot log(5)\\
+&-360000\cdot \pi^4\cdot (1+3\cdot log(2)+3\cdot log(5))-1800\cdot \pi^2\cdot (2+3\cdot log(2)+3\cdot log(5))\\
+&-3\cdot (1+1800\cdot \pi^2+360000\cdot \pi^4+8E6\cdot \pi^6)\cdot log(\pi ))\\
+&c_2=1200\cdot \pi^2\cdot (10+3\cdot log(2)+3\cdot log(5)+120000\cdot \pi^4\cdot (log(2)+log(5)) +\\
+&600\cdot \pi^2\cdot (1+3\cdot log(2)+3\cdot log(5))+3\cdot (1+600\cdot \pi^2+40000\cdot \pi^4)\cdot log(\pi ))\\
+&c_1=720000\cdot \pi^4\cdot (3+log(2)+log(5)+200\cdot \pi^2\cdot (log(2)+log(5))+(1+200\cdot \pi^2)\cdot log(\pi ))\\
+&c_0=16\cdot 10^6\cdot \pi^6\cdot (8+3\cdot log(2)+3\cdot log(5)+3\cdot log(\pi ))
+\end{eqnarray*}
 
 \end{document}
